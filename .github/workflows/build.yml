@@ -13,7 +13,7 @@ jobs:
       packages: write
     env:
       # set your project dir here; use "." if at root
-      WORKDIR: ./site
+      WORKDIR: .
     steps:
       - uses: actions/checkout@v4
 
@@ -49,7 +49,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: ${{ env.WORKDIR }}
-          file: ${{ env.WORKDIR }}/Dockerfile
+          file: ${{ env.WORKDIR }}/dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
