@@ -6,22 +6,16 @@ on:
     tags: ["v*.*.*"]
 
 jobs:
-  build-and-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/build
-      - uses: actions/check
-  
-  docker-publish:
+  docker-build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
-    env:
-      WORKDIR: .
     steps:
-      
-      - uses: actions/docker
+      - uses: actions/build
+
+      - uses: actions/check
+
       - name: Docker meta (lowercase image + tags)
         id: meta
         uses: docker/metadata-action@v5
@@ -42,8 +36,8 @@ jobs:
 
       - uses: docker/build-push-action@v6
         with:
-          context: ${{ env.WORKDIR }}
-          file: ${{ env.WORKDIR }}/dockerfile
+          context: .
+          file: ./dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
