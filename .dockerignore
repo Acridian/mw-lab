@@ -1,6 +1,4 @@
-.git
-.gitignore
-.vscode
-Dockerfile
-dist
-node_modules
+dist/
+node_modules/
+.vscode/
+.github/
