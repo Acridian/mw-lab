@@ -37,11 +37,11 @@ async function findGalleryImages(productSlug) {
       try {
         await fs.copyFile(srcPath, destPath);
         galleries.push(`~/assets/images/products/${img}`);
-      } catch (err) {
+      } catch {
         // Image might already exist, that's OK
       }
     }
-  } catch (err) {
+  } catch {
     // Directory might not exist
   }
 
@@ -49,11 +49,11 @@ async function findGalleryImages(productSlug) {
 }
 
 // Extract specifications from product description
-function extractSpecifications(content, productCode) {
+function extractSpecifications(content) {
   const specs = {};
 
   // Extract weight
-  const weightMatch = content.match(/Масса[^:]*:\s*([^\.]+)/i);
+  const weightMatch = content.match(/Масса[^:]*:\s*([^.]+)/i);
   if (weightMatch) {
     specs.weight = weightMatch[1].trim();
   }
@@ -65,13 +65,13 @@ function extractSpecifications(content, productCode) {
   }
 
   // Extract power supply
-  const powerMatch = content.match(/220\s*В[^\.]+/);
+  const powerMatch = content.match(/220\s*В[^.]+/);
   if (powerMatch) {
     specs.powerSupply = powerMatch[0].trim();
   }
 
   // Extract interface
-  const interfaceMatch = content.match(/RS\s*\d+[^\.]+/i);
+  const interfaceMatch = content.match(/RS\s*\d+[^.]+/i);
   if (interfaceMatch) {
     specs.interface = interfaceMatch[0].trim();
   }
@@ -93,7 +93,7 @@ function extractSpecifications(content, productCode) {
 // Extract product code from title
 function extractProductCode(title) {
   // Match patterns like УМ2021-100, БПР0915-7884, etc.
-  const codeMatch = title.match(/([А-Я]{2,4}[\d\-]+[\w]*)/);
+  const codeMatch = title.match(/([А-Я]{2,4}[\d-]+[\w]*)/);
   return codeMatch ? codeMatch[1] : null;
 }
 
@@ -148,7 +148,7 @@ async function enhanceProduct(filePath) {
 
     const productSlug = path.basename(filePath, '.md');
     const productCode = extractProductCode(frontmatter.title || '');
-    const specifications = extractSpecifications(bodyContent, productCode);
+    const specifications = extractSpecifications(bodyContent);
     const gallery = await findGalleryImages(productSlug);
     const documents = createDocumentLinks(productCode);
 
@@ -157,12 +157,9 @@ async function enhanceProduct(filePath) {
     const newLines = [];
 
     // Add existing lines until we hit metadata
-    let beforeMetadata = true;
     for (const line of lines) {
       newLines.push(line);
       if (line.startsWith('leadTime:')) {
-        beforeMetadata = false;
-
         // Add new fields after leadTime
         if (productCode) {
           newLines.push(`productCode: "${productCode}"`);
