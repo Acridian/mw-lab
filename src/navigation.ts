@@ -52,7 +52,7 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Заказать звонок', href: getPermalink('/contact') }],
+  actions: [{ text: 'Связаться с нами', href: getPermalink('/contact') }],
 };
 
 export const footerData = {
