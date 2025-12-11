@@ -1,27 +1,27 @@
 ---
 publishDate: 2023-03-12T00:00:00Z
-title: "Усилитель мощности  УМ2021-100"
-excerpt: "Усилитель мощности УМ2021-100 обеспечивает усиление СВЧ-сигналов S-диапазона...."
+title: 'Усилитель мощности  УМ2021-100'
+excerpt: 'Усилитель мощности УМ2021-100 обеспечивает усиление СВЧ-сигналов S-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/um2021-100-input-scaled.jpg
-leadTime: "под заказ - 16 недель с момента авансирования."
-productCode: "УМ2021-100"
+leadTime: 'под заказ - 16 недель с момента авансирования.'
+productCode: 'УМ2021-100'
 specifications:
-  frequency: "S-диапазон"
-  weight: "УМ2021-100 - 18,5 кг, С600-24 - 6,7 кг, K011 - 0,3 кг"
-  protection: "IP65"
-  powerSupply: "220 В и частотой 50 Гц поступающего на вход сетевого источника питания С600-24"
-  interface: "RS485 modbus"
+  frequency: 'S-диапазон'
+  weight: 'УМ2021-100 - 18,5 кг, С600-24 - 6,7 кг, K011 - 0,3 кг'
+  protection: 'IP65'
+  powerSupply: '220 В и частотой 50 Гц поступающего на вход сетевого источника питания С600-24'
+  interface: 'RS485 modbus'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ум2021-100-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ум2021-100-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ум2021-100-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ум2021-100-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Усилитель мощности  УМ2021-100 | MW-Lab"
-  description: "Усилитель мощности УМ2021-100 обеспечивает усиление СВЧ-сигналов S-диапазона...."
+  title: 'Усилитель мощности  УМ2021-100 | MW-Lab'
+  description: 'Усилитель мощности УМ2021-100 обеспечивает усиление СВЧ-сигналов S-диапазона....'
 ---
 
 Усилитель мощности УМ2021-100 обеспечивает усиление СВЧ-сигналов S-диапазона.

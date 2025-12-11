@@ -23,10 +23,11 @@ async function findGalleryImages(productSlug) {
 
   try {
     const files = await fs.readdir(wpExportImagesDir);
-    const productImages = files.filter(f =>
-      f.startsWith(productSlug) &&
-      !f.includes('scaled') && // Skip scaled versions
-      (f.endsWith('.jpg') || f.endsWith('.png') || f.endsWith('.jpeg'))
+    const productImages = files.filter(
+      (f) =>
+        f.startsWith(productSlug) &&
+        !f.includes('scaled') && // Skip scaled versions
+        (f.endsWith('.jpg') || f.endsWith('.png') || f.endsWith('.jpeg'))
     );
 
     // Copy to assets and return paths
@@ -105,13 +106,13 @@ function createDocumentLinks(productCode) {
     {
       title: 'Паспорт изделия',
       url: `/documents/passports/${productCode.toLowerCase()}-passport.pdf`,
-      type: 'passport'
+      type: 'passport',
     },
     {
       title: 'Чертеж изделия',
       url: `/documents/datasheets/${productCode.toLowerCase()}-drawing.pdf`,
-      type: 'datasheet'
-    }
+      type: 'datasheet',
+    },
   ];
 }
 
@@ -137,7 +138,7 @@ async function enhanceProduct(filePath) {
     const frontmatter = {};
 
     // Parse existing frontmatter
-    frontmatterStr.split('\n').forEach(line => {
+    frontmatterStr.split('\n').forEach((line) => {
       const colonIndex = line.indexOf(':');
       if (colonIndex > 0) {
         const key = line.substring(0, colonIndex).trim();
@@ -177,12 +178,12 @@ async function enhanceProduct(filePath) {
 
         if (gallery && gallery.length > 0) {
           newLines.push('gallery:');
-          gallery.forEach(img => newLines.push(`  - ${img}`));
+          gallery.forEach((img) => newLines.push(`  - ${img}`));
         }
 
         if (documents && documents.length > 0) {
           newLines.push('documents:');
-          documents.forEach(doc => {
+          documents.forEach((doc) => {
             newLines.push(`  - title: "${doc.title}"`);
             newLines.push(`    url: "${doc.url}"`);
             newLines.push(`    type: "${doc.type}"`);
@@ -196,14 +197,16 @@ async function enhanceProduct(filePath) {
     await fs.writeFile(filePath, enhancedContent, 'utf-8');
 
     console.log(`✅ Enhanced: ${path.basename(filePath)}`);
-    console.log(`   Code: ${productCode || 'N/A'} | Specs: ${specifications ? 'Yes' : 'No'} | Gallery: ${gallery.length} images`);
+    console.log(
+      `   Code: ${productCode || 'N/A'} | Specs: ${specifications ? 'Yes' : 'No'} | Gallery: ${gallery.length} images`
+    );
 
     return {
       enhanced: true,
       productCode,
       specsAdded: !!specifications,
       galleryCount: gallery.length,
-      docsAdded: !!documents
+      docsAdded: !!documents,
     };
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -232,7 +235,7 @@ async function main() {
     console.log(`\n📁 Category: ${category}`);
 
     const files = await fs.readdir(categoryPath);
-    const mdFiles = files.filter(f => f.endsWith('.md'));
+    const mdFiles = files.filter((f) => f.endsWith('.md'));
 
     for (const file of mdFiles) {
       total++;

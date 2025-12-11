@@ -1,21 +1,21 @@
 ---
 publishDate: 2023-03-12T00:00:00Z
-title: "Линейный усилитель КУ0921-30х4"
-excerpt: "КУ0917-30х4 обеспечивает отказоустойчивое усиление ВЧ-сигналов L-диапазона...."
+title: 'Линейный усилитель КУ0921-30х4'
+excerpt: 'КУ0917-30х4 обеспечивает отказоустойчивое усиление ВЧ-сигналов L-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/img_2961-scaled.jpg
-leadTime: "под заказ - 16 недель с момента авансирования."
-productCode: "КУ0921-30"
+leadTime: 'под заказ - 16 недель с момента авансирования.'
+productCode: 'КУ0921-30'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ку0921-30-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ку0921-30-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ку0921-30-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ку0921-30-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Линейный усилитель КУ0921-30х4 | MW-Lab"
-  description: "КУ0917-30х4 обеспечивает отказоустойчивое усиление ВЧ-сигналов L-диапазона...."
+  title: 'Линейный усилитель КУ0921-30х4 | MW-Lab'
+  description: 'КУ0917-30х4 обеспечивает отказоустойчивое усиление ВЧ-сигналов L-диапазона....'
 ---
 
 КУ0917-30х4 обеспечивает отказоустойчивое усиление ВЧ-сигналов L-диапазона.

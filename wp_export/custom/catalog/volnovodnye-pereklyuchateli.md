@@ -1,7 +1,7 @@
 ---
-title: "Волноводные переключатели SECTOR MICROWAVE"
+title: 'Волноводные переключатели SECTOR MICROWAVE'
 date: 2023-05-17
-coverImage: "pv-1-scaled.jpg"
+coverImage: 'pv-1-scaled.jpg'
 ---
 
 Волноводные переключатели (производство SECTOR MICROWAVE) сечений CPR229, CPR137, WR75 предназначены для коммутации СВЧ-сигналов как в приемном, так и передающем трактах станции спутниковой связи.

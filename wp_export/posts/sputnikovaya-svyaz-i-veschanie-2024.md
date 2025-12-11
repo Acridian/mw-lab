@@ -1,9 +1,7 @@
 ---
-title: "Спутниковая связь и вещание 2024"
+title: 'Спутниковая связь и вещание 2024'
 date: 2024-01-30
-categories: 
-  - "publikatsii"
-coverImage: "snimok-30.01.2024-v-21.54.jpg"
+categories:
+  - 'publikatsii'
+coverImage: 'snimok-30.01.2024-v-21.54.jpg'
 ---
-
-

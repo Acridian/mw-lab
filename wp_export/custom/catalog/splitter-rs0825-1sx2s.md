@@ -1,7 +1,7 @@
 ---
-title: "Сплиттер РС0825-1Sx2S"
+title: 'Сплиттер РС0825-1Sx2S'
 date: 2023-05-20
-coverImage: "img_4959-scaled.jpg"
+coverImage: 'img_4959-scaled.jpg'
 ---
 
 Сплиттер РС0825-1Sx2S

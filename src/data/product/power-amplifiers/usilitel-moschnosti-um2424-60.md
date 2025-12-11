@@ -1,26 +1,26 @@
 ---
 publishDate: 2024-10-31T00:00:00Z
-title: "Усилитель мощности УМ2424-60"
-excerpt: "Усилитель мощности УМ2424-60 обеспечивает усиление СВЧ-сигналов S-диапазона...."
+title: 'Усилитель мощности УМ2424-60'
+excerpt: 'Усилитель мощности УМ2424-60 обеспечивает усиление СВЧ-сигналов S-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/um2424-60m-3-scaled.jpg
-leadTime: "под заказ — 16 недель с момента авансирования."
-productCode: "УМ2424-60"
+leadTime: 'под заказ — 16 недель с момента авансирования.'
+productCode: 'УМ2424-60'
 specifications:
-  frequency: "S-диапазон"
-  weight: "_** под заказ — 16 недель с момента авансирования"
-  protection: "IP65"
-  interface: "RS485 modbus"
+  frequency: 'S-диапазон'
+  weight: '_** под заказ — 16 недель с момента авансирования'
+  protection: 'IP65'
+  interface: 'RS485 modbus'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ум2424-60-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ум2424-60-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ум2424-60-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ум2424-60-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Усилитель мощности УМ2424-60 | MW-Lab"
-  description: "Усилитель мощности УМ2424-60 обеспечивает усиление СВЧ-сигналов S-диапазона...."
+  title: 'Усилитель мощности УМ2424-60 | MW-Lab'
+  description: 'Усилитель мощности УМ2424-60 обеспечивает усиление СВЧ-сигналов S-диапазона....'
 ---
 
 Усилитель мощности УМ2424-60 обеспечивает усиление СВЧ-сигналов S-диапазона.

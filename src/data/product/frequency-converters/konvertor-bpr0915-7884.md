@@ -1,23 +1,23 @@
 ---
 publishDate: 2023-11-24T00:00:00Z
-title: "Конвертор БПР0915-7884"
-excerpt: "Конвертор БПР0915-7884 обеспечивает преобразование и усиление сигнала L-диапазона в сигнал X-диапазона...."
+title: 'Конвертор БПР0915-7884'
+excerpt: 'Конвертор БПР0915-7884 обеспечивает преобразование и усиление сигнала L-диапазона в сигнал X-диапазона....'
 category: frequency-converters
 image: ~/assets/images/products/brg10-scaled.jpg
-leadTime: "под заказ — не более 24 недель с момента авансирования."
-productCode: "БПР0915-7884"
+leadTime: 'под заказ — не более 24 недель с момента авансирования.'
+productCode: 'БПР0915-7884'
 specifications:
-  powerSupply: "220 В частотой 50 Гц"
+  powerSupply: '220 В частотой 50 Гц'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/бпр0915-7884-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/бпр0915-7884-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/бпр0915-7884-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/бпр0915-7884-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Конвертор БПР0915-7884 | MW-Lab"
-  description: "Конвертор БПР0915-7884 обеспечивает преобразование и усиление сигнала L-диапазона в сигнал X-диапазона...."
+  title: 'Конвертор БПР0915-7884 | MW-Lab'
+  description: 'Конвертор БПР0915-7884 обеспечивает преобразование и усиление сигнала L-диапазона в сигнал X-диапазона....'
 ---
 
 Конвертор БПР0915-7884 обеспечивает преобразование и усиление сигнала L-диапазона в сигнал X-диапазона.

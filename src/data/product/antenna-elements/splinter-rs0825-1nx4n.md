@@ -1,23 +1,23 @@
 ---
 publishDate: 2023-05-13T00:00:00Z
-title: "Сплиттер РС0825-1Nx4N"
-excerpt: "**Сплиттер РС0825-1Nx4N**..."
+title: 'Сплиттер РС0825-1Nx4N'
+excerpt: '**Сплиттер РС0825-1Nx4N**...'
 category: antenna-elements
 image: ~/assets/images/products/pc0825-1x4-1-scaled.jpg
-leadTime: "- со склада - 4 шт., под заказ - 6 недель с момента авансирования."
-productCode: "РС0825-1Nx4N"
+leadTime: '- со склада - 4 шт., под заказ - 6 недель с момента авансирования.'
+productCode: 'РС0825-1Nx4N'
 specifications:
-  protection: "IP64"
+  protection: 'IP64'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/рс0825-1nx4n-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/рс0825-1nx4n-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/рс0825-1nx4n-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/рс0825-1nx4n-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Сплиттер РС0825-1Nx4N | MW-Lab"
-  description: "**Сплиттер РС0825-1Nx4N**..."
+  title: 'Сплиттер РС0825-1Nx4N | MW-Lab'
+  description: '**Сплиттер РС0825-1Nx4N**...'
 ---
 
 **Сплиттер РС0825-1Nx4N**

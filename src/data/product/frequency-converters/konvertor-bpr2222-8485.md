@@ -1,25 +1,25 @@
 ---
 publishDate: 2023-03-26T00:00:00Z
-title: "Конвертор БПР8485-2222"
-excerpt: "Конвертор БПР848-2222 обеспечивает преобразование и усиление сигнала Х-диапазона в сигнал S-диапазона...."
+title: 'Конвертор БПР8485-2222'
+excerpt: 'Конвертор БПР848-2222 обеспечивает преобразование и усиление сигнала Х-диапазона в сигнал S-диапазона....'
 category: frequency-converters
 image: ~/assets/images/products/bpr8485-2222-1-scaled.jpg
-leadTime: "под заказ - 16 недель с момента авансирования."
-productCode: "БПР8485-2222"
+leadTime: 'под заказ - 16 недель с момента авансирования.'
+productCode: 'БПР8485-2222'
 specifications:
-  frequency: "S-диапазон"
-  protection: "IP64"
-  powerSupply: "220 В частотой 50 Гц"
+  frequency: 'S-диапазон'
+  protection: 'IP64'
+  powerSupply: '220 В частотой 50 Гц'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/бпр8485-2222-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/бпр8485-2222-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/бпр8485-2222-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/бпр8485-2222-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Конвертор БПР8485-2222 | MW-Lab"
-  description: "Конвертор БПР848-2222 обеспечивает преобразование и усиление сигнала Х-диапазона в сигнал S-диапазона...."
+  title: 'Конвертор БПР8485-2222 | MW-Lab'
+  description: 'Конвертор БПР848-2222 обеспечивает преобразование и усиление сигнала Х-диапазона в сигнал S-диапазона....'
 ---
 
 Конвертор БПР848-2222 обеспечивает преобразование и усиление сигнала Х-диапазона в сигнал S-диапазона.

@@ -49,7 +49,7 @@ export const getStaticPaths = (async () => {
       params: { category },
       props: {
         products: categoryProducts,
-        categoryInfo: categories[category as keyof typeof categories]
+        categoryInfo: categories[category as keyof typeof categories],
       },
     };
   });
@@ -75,17 +75,13 @@ const metadata = {
     </Headline>
 
     <div class="mb-8">
-      <Button href="/products" variant="link">
-        ← Все категории
-      </Button>
+      <Button href="/products" variant="link"> ← Все категории </Button>
     </div>
 
     {
       products.length > 0 ? (
         <>
-          <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Найдено продуктов: {products.length}
-          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Найдено продуктов: {products.length}</p>
           <ProductGrid products={products} />
         </>
       ) : (

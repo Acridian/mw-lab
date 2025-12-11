@@ -1,7 +1,7 @@
 ---
-title: "Волноводный адаптер WR75G-WR62G"
+title: 'Волноводный адаптер WR75G-WR62G'
 date: 2024-04-19
-coverImage: "wr75-wr62-scaled.jpg"
+coverImage: 'wr75-wr62-scaled.jpg'
 ---
 
 Предназначен для перехода волноводного тракта сечения WR75 в сечение WR62 и наоборот.

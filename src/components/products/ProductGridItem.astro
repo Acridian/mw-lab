@@ -42,32 +42,29 @@ const link = `/products/${product.id}`;
     <!-- Product Info -->
     <div class="p-6 flex flex-col flex-grow">
       <h3 class="text-xl font-bold mb-2 font-heading dark:text-slate-300">
-        <a
-          class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
-          href={link}
-        >
+        <a class="inline-block hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={link}>
           {product.data.title}
         </a>
       </h3>
 
-      {product.data.productCode && (
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Артикул: {product.data.productCode}</p>
-      )}
+      {
+        product.data.productCode && (
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Артикул: {product.data.productCode}</p>
+        )
+      }
 
-      {product.data.excerpt && (
-        <p class="text-muted dark:text-slate-400 mb-4 flex-grow">{product.data.excerpt}</p>
-      )}
+      {product.data.excerpt && <p class="text-muted dark:text-slate-400 mb-4 flex-grow">{product.data.excerpt}</p>}
 
-      {product.data.leadTime && (
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
-          <span class="font-medium">Срок поставки:</span> {product.data.leadTime}
-        </p>
-      )}
+      {
+        product.data.leadTime && (
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            <span class="font-medium">Срок поставки:</span> {product.data.leadTime}
+          </p>
+        )
+      }
 
       <div class="mt-auto">
-        <Button href={link} variant="secondary" class="w-full">
-          Подробнее
-        </Button>
+        <Button href={link} variant="secondary" class="w-full"> Подробнее </Button>
       </div>
     </div>
   </div>

@@ -1,25 +1,25 @@
 ---
 publishDate: 2023-03-12T00:00:00Z
-title: "Усилитель мощности УМ2121-12S"
-excerpt: "УМ2121-12S обеспечивает усиление сигнала S-диапазона...."
+title: 'Усилитель мощности УМ2121-12S'
+excerpt: 'УМ2121-12S обеспечивает усиление сигнала S-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/um1822-12-3-scaled.jpg
-leadTime: "под заказ — 16 недель с момента авансирования."
-productCode: "УМ2121-12S"
+leadTime: 'под заказ — 16 недель с момента авансирования.'
+productCode: 'УМ2121-12S'
 specifications:
-  frequency: "S-диапазон"
-  protection: "IP65"
-  interface: "RS485 modbus"
+  frequency: 'S-диапазон'
+  protection: 'IP65'
+  interface: 'RS485 modbus'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ум2121-12s-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ум2121-12s-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ум2121-12s-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ум2121-12s-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Усилитель мощности УМ2121-12S | MW-Lab"
-  description: "УМ2121-12S обеспечивает усиление сигнала S-диапазона...."
+  title: 'Усилитель мощности УМ2121-12S | MW-Lab'
+  description: 'УМ2121-12S обеспечивает усиление сигнала S-диапазона....'
 ---
 
 УМ2121-12S обеспечивает усиление сигнала S-диапазона.

@@ -1,25 +1,25 @@
 ---
 publishDate: 2023-03-12T00:00:00Z
-title: "Усилитель мощности УМ1822-12"
-excerpt: "УМ1822-12 обеспечивает усиление сигнала S-диапазона...."
+title: 'Усилитель мощности УМ1822-12'
+excerpt: 'УМ1822-12 обеспечивает усиление сигнала S-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/um1822-12-1-scaled.jpg
-leadTime: "под заказ - 12 недель с момента авансирования."
-productCode: "УМ1822-12"
+leadTime: 'под заказ - 12 недель с момента авансирования.'
+productCode: 'УМ1822-12'
 specifications:
-  frequency: "S-диапазон"
-  protection: "IP65"
-  interface: "RS485 modbus"
+  frequency: 'S-диапазон'
+  protection: 'IP65'
+  interface: 'RS485 modbus'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ум1822-12-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ум1822-12-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ум1822-12-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ум1822-12-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Усилитель мощности УМ1822-12 | MW-Lab"
-  description: "УМ1822-12 обеспечивает усиление сигнала S-диапазона...."
+  title: 'Усилитель мощности УМ1822-12 | MW-Lab'
+  description: 'УМ1822-12 обеспечивает усиление сигнала S-диапазона....'
 ---
 
 УМ1822-12 обеспечивает усиление сигнала S-диапазона.

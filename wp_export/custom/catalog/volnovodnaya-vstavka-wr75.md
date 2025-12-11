@@ -1,7 +1,7 @@
 ---
-title: "Волноводная вставка WR75"
+title: 'Волноводная вставка WR75'
 date: 2023-05-14
-coverImage: "wr75-ugolok-scaled.jpg"
+coverImage: 'wr75-ugolok-scaled.jpg'
 ---
 
 Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM.

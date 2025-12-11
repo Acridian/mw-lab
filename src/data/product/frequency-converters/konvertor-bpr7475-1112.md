@@ -1,23 +1,23 @@
 ---
 publishDate: 2023-11-24T00:00:00Z
-title: "Конвертор БПР7475-1112"
-excerpt: "Конвертор БПР7475-1112 обеспечивает преобразование и усиление сигнала X-диапазона в сигнал L-диапазона...."
+title: 'Конвертор БПР7475-1112'
+excerpt: 'Конвертор БПР7475-1112 обеспечивает преобразование и усиление сигнала X-диапазона в сигнал L-диапазона....'
 category: frequency-converters
 image: ~/assets/images/products/brg10-scaled.jpg
-leadTime: "под заказ — не более 24 недель с момента авансирования."
-productCode: "БПР7475-1112"
+leadTime: 'под заказ — не более 24 недель с момента авансирования.'
+productCode: 'БПР7475-1112'
 specifications:
-  powerSupply: "220 В частотой 50 Гц"
+  powerSupply: '220 В частотой 50 Гц'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/бпр7475-1112-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/бпр7475-1112-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/бпр7475-1112-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/бпр7475-1112-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Конвертор БПР7475-1112 | MW-Lab"
-  description: "Конвертор БПР7475-1112 обеспечивает преобразование и усиление сигнала X-диапазона в сигнал L-диапазона...."
+  title: 'Конвертор БПР7475-1112 | MW-Lab'
+  description: 'Конвертор БПР7475-1112 обеспечивает преобразование и усиление сигнала X-диапазона в сигнал L-диапазона....'
 ---
 
 Конвертор БПР7475-1112 обеспечивает преобразование и усиление сигнала X-диапазона в сигнал L-диапазона.

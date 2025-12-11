@@ -1,23 +1,23 @@
 ---
 publishDate: 2024-10-12T00:00:00Z
-title: "Усилитель мощности УМ5860-2"
-excerpt: "УМ5860-2 обеспечивает усиление сигнала С-диапазона...."
+title: 'Усилитель мощности УМ5860-2'
+excerpt: 'УМ5860-2 обеспечивает усиление сигнала С-диапазона....'
 category: power-amplifiers
 image: ~/assets/images/products/um5860-2-scaled.jpg
-leadTime: "под заказ — 16 недель с момента авансирования."
-productCode: "УМ5860-2"
+leadTime: 'под заказ — 16 недель с момента авансирования.'
+productCode: 'УМ5860-2'
 specifications:
-  protection: "IP65"
+  protection: 'IP65'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/ум5860-2-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/ум5860-2-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/ум5860-2-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/ум5860-2-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Усилитель мощности УМ5860-2 | MW-Lab"
-  description: "УМ5860-2 обеспечивает усиление сигнала С-диапазона...."
+  title: 'Усилитель мощности УМ5860-2 | MW-Lab'
+  description: 'УМ5860-2 обеспечивает усиление сигнала С-диапазона....'
 ---
 
 УМ5860-2 обеспечивает усиление сигнала С-диапазона.

@@ -1,24 +1,24 @@
 ---
 publishDate: 2023-03-12T00:00:00Z
-title: "Конвертор БПР0917-1314ОГ"
-excerpt: "Конвертор БПР0917-1314ОГ обеспечивает преобразование и усиление сигнала L-диапазона в сигнал Ku-диапазона...."
+title: 'Конвертор БПР0917-1314ОГ'
+excerpt: 'Конвертор БПР0917-1314ОГ обеспечивает преобразование и усиление сигнала L-диапазона в сигнал Ku-диапазона....'
 category: frequency-converters
 image: ~/assets/images/products/bpr0917-1314g-scaled.jpg
-leadTime: "со склада - 1 шт., под заказ - 12 недель с момента авансирования."
-productCode: "БПР0917-1314"
+leadTime: 'со склада - 1 шт., под заказ - 12 недель с момента авансирования.'
+productCode: 'БПР0917-1314'
 specifications:
-  frequency: "Ku-диапазон"
-  protection: "IP65"
+  frequency: 'Ku-диапазон'
+  protection: 'IP65'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/бпр0917-1314-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/бпр0917-1314-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/бпр0917-1314-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/бпр0917-1314-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Конвертор БПР0917-1314ОГ | MW-Lab"
-  description: "Конвертор БПР0917-1314ОГ обеспечивает преобразование и усиление сигнала L-диапазона в сигнал Ku-диапазона...."
+  title: 'Конвертор БПР0917-1314ОГ | MW-Lab'
+  description: 'Конвертор БПР0917-1314ОГ обеспечивает преобразование и усиление сигнала L-диапазона в сигнал Ku-диапазона....'
 ---
 
 Конвертор БПР0917-1314ОГ обеспечивает преобразование и усиление сигнала L-диапазона в сигнал Ku-диапазона.

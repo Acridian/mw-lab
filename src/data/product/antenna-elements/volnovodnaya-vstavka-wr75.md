@@ -1,13 +1,13 @@
 ---
 publishDate: 2023-05-14T00:00:00Z
-title: "Волноводная вставка WR75"
-excerpt: "Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM...."
+title: 'Волноводная вставка WR75'
+excerpt: 'Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM....'
 category: antenna-elements
 image: ~/assets/images/products/wr75-ugolok-scaled.jpg
-leadTime: "со склада - 5 шт."
+leadTime: 'со склада - 5 шт.'
 metadata:
-  title: "Волноводная вставка WR75 | MW-Lab"
-  description: "Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM...."
+  title: 'Волноводная вставка WR75 | MW-Lab'
+  description: 'Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM....'
 ---
 
 Волноводная вставка 75-510B-1.75x1.75-6-6 производства Narda-ATM.

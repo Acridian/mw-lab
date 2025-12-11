@@ -1,21 +1,21 @@
 ---
 publishDate: 2023-01-21T00:00:00Z
-title: "Коммутатор сигналов БКС0917-5х3"
-excerpt: "БКС0917-5х3 обеспечивает гибкую и отказоустойчивую коммутацию СВЧ-сигналов L-диапазона...."
+title: 'Коммутатор сигналов БКС0917-5х3'
+excerpt: 'БКС0917-5х3 обеспечивает гибкую и отказоустойчивую коммутацию СВЧ-сигналов L-диапазона....'
 category: signal-switches
 image: ~/assets/images/products/img_4587-scaled.jpg
-leadTime: "под заказ - 16 недель с момента авансирования."
-productCode: "БКС0917-5"
+leadTime: 'под заказ - 16 недель с момента авансирования.'
+productCode: 'БКС0917-5'
 documents:
-  - title: "Паспорт изделия"
-    url: "/documents/passports/бкс0917-5-passport.pdf"
-    type: "passport"
-  - title: "Чертеж изделия"
-    url: "/documents/datasheets/бкс0917-5-drawing.pdf"
-    type: "datasheet"
+  - title: 'Паспорт изделия'
+    url: '/documents/passports/бкс0917-5-passport.pdf'
+    type: 'passport'
+  - title: 'Чертеж изделия'
+    url: '/documents/datasheets/бкс0917-5-drawing.pdf'
+    type: 'datasheet'
 metadata:
-  title: "Коммутатор сигналов БКС0917-5х3 | MW-Lab"
-  description: "БКС0917-5х3 обеспечивает гибкую и отказоустойчивую коммутацию СВЧ-сигналов L-диапазона...."
+  title: 'Коммутатор сигналов БКС0917-5х3 | MW-Lab'
+  description: 'БКС0917-5х3 обеспечивает гибкую и отказоустойчивую коммутацию СВЧ-сигналов L-диапазона....'
 ---
 
 БКС0917-5х3 обеспечивает гибкую и отказоустойчивую коммутацию СВЧ-сигналов L-диапазона.
