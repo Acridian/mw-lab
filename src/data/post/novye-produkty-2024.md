@@ -17,4 +17,4 @@ metadata:
 
 Подробная информация доступна на внешнем ресурсе.
 
-[Читать далее →](https://cs.groteck.ru)
+[Читать далее →](http://cs.groteck.ru/SATCOM_2024/117/index.html)
