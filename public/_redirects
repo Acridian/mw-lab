@@ -1,0 +1,24 @@
+# WordPress to Astro Migration Redirects
+# 301 Permanent Redirects for SEO
+
+# Product category pages
+/tovary/*  /products/category/:splat  301
+
+# Product detail pages
+/catalog/*  /products/:splat  301
+
+# Static pages
+/kontakty  /contact  301
+/o-kompanii  /about  301
+
+# RSS Feed
+/feed  /rss.xml  301
+/feed/*  /rss.xml  301
+
+# Blog/Publications - already at /publikatsii (no redirect needed)
+
+# Trailing slash normalization
+/products/  /products  301
+/publikatsii/  /publikatsii  301
+/contact/  /contact  301
+/about/  /about  301

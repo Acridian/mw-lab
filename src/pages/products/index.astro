@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductGrid from '~/components/products/ProductGrid.astro';
+import Headline from '~/components/ui/Headline.astro';
+
+export const prerender = true;
+
+// Get all products
+const allProducts = await getCollection('product', ({ data }) => {
+  return data.draft !== true;
+});
+
+// Sort by title
+const sortedProducts = allProducts.sort((a, b) => a.data.title.localeCompare(b.data.title, 'ru'));
+
+// Group by category
+const categories = [
+  { slug: 'antenna-elements', title: 'Элементы антенно-волноводного тракта' },
+  { slug: 'power-amplifiers', title: 'Усилители мощности' },
+  { slug: 'redundancy-systems', title: 'Системы резервирования 1:1' },
+  { slug: 'frequency-converters', title: 'Преобразователи частоты' },
+  { slug: 'signal-switches', title: 'Коммутаторы сигналов' },
+  { slug: 'signal-generators', title: 'Генераторы сигналов' },
+];
+
+const metadata = {
+  title: 'Продукция — Лаборатория Микроволн',
+  description:
+    'Каталог профессионального оборудования спутниковой связи: усилители мощности, преобразователи частоты, коммутаторы сигналов и другое СВЧ-оборудование.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-7xl">
+    <Headline>
+      <Fragment slot="title">Продукция</Fragment>
+      <Fragment slot="subtitle">
+        Профессиональное оборудование спутниковой связи собственной разработки и производства
+      </Fragment>
+    </Headline>
+
+    <!-- Category Navigation -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-6 dark:text-slate-200">Категории продукции</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          categories.map((category) => {
+            const count = allProducts.filter((p) => p.data.category === category.slug).length;
+            return (
+              <a
+                href={`/products/category/${category.slug}`}
+                class="block p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition border border-gray-200 dark:border-gray-700"
+              >
+                <h3 class="text-lg font-bold mb-2 dark:text-slate-200">{category.title}</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">{count} продуктов</p>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <!-- All Products -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6 dark:text-slate-200">Все продукты ({allProducts.length})</h2>
+      <ProductGrid products={sortedProducts} />
+    </div>
+  </section>
+</Layout>

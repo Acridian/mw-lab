@@ -1,0 +1,183 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
+import { findImage } from '~/utils/images';
+
+export interface Props {
+  product: CollectionEntry<'product'>;
+}
+
+const { product } = Astro.props;
+const { title, image, gallery, specifications, documents, description, productCode, leadTime } = product.data;
+const mainImage = await findImage(image);
+---
+
+<div class="max-w-6xl mx-auto">
+  <!-- Product Header -->
+  <div class="grid md:grid-cols-2 gap-8 mb-12">
+    <!-- Image Gallery -->
+    <div>
+      {
+        mainImage && (
+          <div class="mb-4">
+            <Image
+              src={mainImage}
+              alt={title}
+              class="w-full rounded-lg shadow-lg"
+              widths={[600, 900]}
+              width={600}
+              sizes="(max-width: 768px) 100vw, 600px"
+              aspectRatio="4:3"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        )
+      }
+      {
+        gallery && gallery.length > 0 && (
+          <div class="grid grid-cols-3 gap-2">
+            {gallery.map(async (img) => {
+              const galleryImage = await findImage(img);
+              return (
+                galleryImage && (
+                  <Image
+                    src={galleryImage}
+                    alt={title}
+                    class="rounded cursor-pointer hover:opacity-75 transition"
+                    widths={[200, 300]}
+                    width={200}
+                    aspectRatio="4:3"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )
+              );
+            })}
+          </div>
+        )
+      }
+    </div>
+
+    <!-- Product Info -->
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4 font-heading dark:text-slate-200">{title}</h1>
+
+      {productCode && (
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+          <span class="font-semibold">Артикул:</span> {productCode}
+        </p>
+      )}
+
+      {description && <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">{description}</p>}
+
+      {leadTime && (
+        <div class="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4 mb-6">
+          <p class="text-gray-800 dark:text-gray-200">
+            <Icon name="tabler:clock" class="w-5 h-5 inline-block mr-2" />
+            <span class="font-semibold">Срок поставки:</span> {leadTime}
+          </p>
+        </div>
+      )}
+
+      <!-- Specifications -->
+      {
+        specifications && Object.keys(specifications).some((key) => specifications[key as keyof typeof specifications]) && (
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 font-heading dark:text-slate-200">Технические характеристики</h2>
+            <dl class="space-y-2">
+              {specifications.frequency && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Частота:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.frequency}</dd>
+                </div>
+              )}
+              {specifications.power && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Мощность:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.power}</dd>
+                </div>
+              )}
+              {specifications.weight && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Вес:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.weight}</dd>
+                </div>
+              )}
+              {specifications.dimensions && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Габариты:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.dimensions}</dd>
+                </div>
+              )}
+              {specifications.protection && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Защита:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.protection}</dd>
+                </div>
+              )}
+              {specifications.powerSupply && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Питание:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.powerSupply}</dd>
+                </div>
+              )}
+              {specifications.interface && (
+                <div class="flex border-b border-gray-200 dark:border-gray-700 pb-2">
+                  <dt class="font-medium text-gray-600 dark:text-gray-400 w-1/3">Интерфейс:</dt>
+                  <dd class="text-gray-900 dark:text-gray-100 w-2/3">{specifications.interface}</dd>
+                </div>
+              )}
+            </dl>
+          </div>
+        )
+      }
+
+      <!-- Documents -->
+      {
+        documents && documents.length > 0 && (
+          <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 font-heading dark:text-slate-200">Документация</h2>
+            <ul class="space-y-3">
+              {documents.map((doc) => (
+                <li>
+                  <a
+                    href={doc.url}
+                    download
+                    class="flex items-center text-primary hover:text-primary-600 dark:hover:text-blue-400 transition font-medium"
+                  >
+                    <Icon name="tabler:file-download" class="w-5 h-5 mr-2 flex-shrink-0" />
+                    {doc.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <Button href="/contact" variant="primary" class="flex-1">
+          <Icon name="tabler:mail" class="w-5 h-5 mr-2 inline-block" />
+          Запросить предложение
+        </Button>
+        <Button href="/contact" variant="secondary" class="flex-1">
+          <Icon name="tabler:phone" class="w-5 h-5 mr-2 inline-block" />
+          Заказать звонок
+        </Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Description Content -->
+  {
+    Astro.slots.has('default') && (
+      <div class="prose dark:prose-invert max-w-none mb-12">
+        <slot />
+      </div>
+    )
+  }
+</div>

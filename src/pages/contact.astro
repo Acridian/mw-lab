@@ -5,74 +5,105 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Контакты — Лаборатория Микроволн',
+  description: 'Свяжитесь с нами для получения консультации и коммерческого предложения. Email: info@mw-lab.ru',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
+  <HeroText tagline="Контакты" title="Свяжитесь с нами!" />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
+  <!-- Contact Form Widget ******************* -->
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Отправьте нам сообщение"
+    subtitle="Заполните форму ниже, и наши специалисты свяжутся с вами в ближайшее время для обсуждения вашего проекта."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Ваше имя',
+        placeholder: 'Иван Иванов',
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email',
+        placeholder: 'ivan@example.com',
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Телефон',
+        placeholder: '+7 (___) ___-__-__',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Сообщение',
+      placeholder: 'Опишите ваши требования к оборудованию...',
+      rows: 6,
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Отправляя эту форму, вы соглашаетесь с обработкой ваших персональных данных в соответствии с нашей политикой конфиденциальности.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Наша команда обычно отвечает в течение 1-2 рабочих дней."
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Contact Information Widget ************** -->
   <Features2
-    title="We are here to help!"
+    title="Как с нами связаться"
+    subtitle="Выберите удобный для вас способ связи"
+    columns={3}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'info@mw-lab.ru',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Адрес',
+        description: '124460, Москва, Зеленоград, ул. Конструктора Гуськова, дом 8',
         icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Рабочие часы',
+        description: 'Пн-Пт: 9:00 - 18:00 (МСК)',
+        icon: 'tabler:clock',
+      },
+    ]}
+  />
+
+  <!-- Additional Information Widget ************** -->
+  <Features2
+    title="Дополнительная информация"
+    subtitle="Что включить в запрос"
+    columns={2}
+    items={[
+      {
+        title: 'Техническая консультация',
+        description:
+          'Для получения технической консультации укажите предполагаемые параметры оборудования: частотный диапазон, выходную мощность, требования к габаритам и условиям эксплуатации.',
+        icon: 'tabler:help-circle',
+      },
+      {
+        title: 'Коммерческое предложение',
+        description:
+          'Для подготовки коммерческого предложения укажите интересующую продукцию, требуемое количество, желаемые сроки поставки и контактные данные для связи.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Индивидуальная разработка',
+        description:
+          'Если вам требуется разработка оборудования под специфические требования, опишите задачу максимально подробно: область применения, технические параметры, особые требования.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Техническая поддержка',
+        description:
+          'При обращении по вопросам технической поддержки укажите модель оборудования, номер изделия и подробное описание вопроса или проблемы.',
+        icon: 'tabler:lifebuoy',
       },
     ]}
   />
