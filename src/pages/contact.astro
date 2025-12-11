@@ -5,13 +5,18 @@ import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'Контакты — Лаборатория Микроволн',
-  description: 'Свяжитесь с нами для получения консультации и коммерческого предложения. Телефон: +7 915 008-3616, Email: info@mw-lab.ru',
+  description:
+    'Свяжитесь с нами для получения консультации и коммерческого предложения. Телефон: +7 915 008-3616, Email: info@mw-lab.ru',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
-  <HeroText tagline="Контакты" title="Свяжитесь с нами!" subtitle="Мы всегда рады ответить на ваши вопросы и обсудить ваш проект" />
+  <HeroText
+    tagline="Контакты"
+    title="Свяжитесь с нами!"
+    subtitle="Мы всегда рады ответить на ваши вопросы и обсудить ваш проект"
+  />
 
   <!-- Contact Information Widget ************** -->
   <Features2
