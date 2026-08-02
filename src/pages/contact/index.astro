@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория микроволн» в Москве">
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Контакты</span>
+      </nav>
+      <p class="eyebrow">Москва</p>
+      <h1 class="page-title">Контакты</h1>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell contact-layout">
+      <div>
+        <dl class="contact-list">
+          <div class="contact-item">
+            <dt>Телефон</dt><dd><a href="tel:+79175012121">+7 (917) 501-2121</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Почта</dt><dd><a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Адрес</dt><dd>124460, Москва, Зеленоград, проезд 4801, д.7, стр.5</dd>
+          </div>
+        </dl>
+        <div style="margin-top: 28px">
+          <a
+            class="button button-secondary"
+            href="/downloads/company-details.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Карточка предприятия, PDF, откроется в новой вкладке"
+          >
+            Карточка предприятия (PDF)
+          </a>
+        </div>
+      </div>
+       <div class="contact-map">
+        <div id="yandex-map" style="width:100%;height:400px">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acc115f1f87ad892cb54ffe3100ee510d6bd76212876d3c7895c13aa0f49bbd49&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true" is:inline></script>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

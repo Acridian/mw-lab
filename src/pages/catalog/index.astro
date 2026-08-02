@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import ContactCta from '../../components/ContactCta.astro';
+import { categories } from '../../lib/catalog';
+
+const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
+---
+
+<BaseLayout
+  title="Наша продукция"
+  description="Каталог профессионального оборудования спутниковой связи Лаборатории микроволн"
+>
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Продукция</span>
+      </nav>
+      <p class="eyebrow">{productCount} изделия · {categories.length} направлений</p>
+      <h1 class="page-title">Наша продукция</h1>
+      <p class="page-lead">
+        Генераторы и конверторы СВЧ-сигналов, усилители мощности, коммутаторы, системы резервирования и
+        элементы антенно-волноводного тракта — от 400 МГц до 15 ГГц.
+      </p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell category-grid">
+      {categories.map((category, index) => <CategoryCard {category} {index} />)}
+    </div>
+  </section>
+  <ContactCta />
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import { getProductImage, type ProductCategory } from '../lib/catalog';
+
+interface Props {
+  category: ProductCategory;
+  index: number;
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { category, headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
+const count = category.productSlugs.length;
+const productCount =
+  count === 1 ? '1 продукт' : count >= 2 && count <= 4 ? `${count} продукта` : `${count} продуктов`;
+---
+
+<a class="category-card" href={`/products/${category.slug}/`}>
+  <span class="category-card-count">{productCount}</span>
+  <div class="category-card-media">
+    <Image
+      src={getProductImage(category.image)}
+      alt=""
+      widths={[320, 560]}
+      sizes="(max-width: 640px) 100vw, 50vw"
+    />
+  </div>
+  <div class="category-card-copy">
+    <Heading>{category.title}</Heading>
+    <p>{category.description}</p>
+  </div>
+  <span class="card-action" aria-hidden="true">Открыть</span>
+</a>

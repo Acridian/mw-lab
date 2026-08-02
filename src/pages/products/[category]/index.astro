@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import ContactCta from '../../../components/ContactCta.astro';
+import {
+  categories,
+  getProductsByCategory,
+  type ProductCategory,
+  type ProductRecord,
+} from '../../../lib/catalog';
+
+export async function getStaticPaths() {
+  return Promise.all(
+    categories.map(async (category) => ({
+      params: { category: category.slug },
+      props: { category, products: await getProductsByCategory(category.slug) },
+    })),
+  );
+}
+
+interface Props {
+  category: ProductCategory;
+  products: ProductRecord[];
+}
+
+const { category, products } = Astro.props;
+---
+
+<BaseLayout title={category.title} description={category.description}>
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><a href="/catalog/">Продукция</a><span
+          aria-hidden="true">/</span
+        ><span aria-current="page">{category.title}</span>
+      </nav>
+      <p class="eyebrow">Каталог · {products.length} изделий</p>
+      <h1 class="page-title">{category.title}</h1>
+      <p class="page-lead">{category.description}</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell product-grid">
+      {products.map((product) => <ProductCard {product} />)}
+    </div>
+  </section>
+  <ContactCta />
+</BaseLayout>

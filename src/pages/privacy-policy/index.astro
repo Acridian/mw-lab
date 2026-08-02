@@ -1,0 +1,26 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const page = await getEntry('pages', 'privacy-policy');
+if (!page) throw new Error('Privacy policy content is missing');
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title} description="Политика конфиденциальности сайта mw-lab.ru">
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page"
+          >Политика конфиденциальности</span
+        >
+      </nav>
+      <p class="eyebrow">Правовая информация</p>
+      <h1 class="page-title">{page.data.title}</h1>
+    </div>
+  </header>
+  <div class="shell legal-layout">
+    <aside class="legal-note">Редакция 02.08.2026</aside>
+    <article class="legal-copy rich-copy"><Content /></article>
+  </div>
+</BaseLayout>
