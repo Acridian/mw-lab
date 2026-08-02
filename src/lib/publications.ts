@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
+import publicationRedirects from '../data/publication-redirects.json';
 
 interface PublicationRecord {
   entry: CollectionEntry<'publications'>;
@@ -8,47 +9,23 @@ interface PublicationRecord {
   externalUrl: string;
 }
 
-const publicationRoutes: Record<string, { slug: string; externalUrl: string }> = {
-  '612-2': {
-    slug: 'satellite-communications-and-broadcasting-2025',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2025/index.html',
-  },
-  'modernizatsiya-psss-drive-away': {
-    slug: 'drive-away-station-modernization-2025',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2025/68/index.html',
-  },
-  'novye-produkty-2': {
-    slug: 'new-products-2025',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2025/104/index.html',
-  },
-  'sputnikovaya-svyaz-i-veschanie-2024': {
-    slug: 'satellite-communications-and-broadcasting-2024',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2024/index.html',
-  },
-  'postavka-produktsii-sobstvennoy-razrabotki': {
-    slug: 'in-house-products-2024',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2024/85/index.html',
-  },
-  'novye-produkty-2024': {
-    slug: 'new-products-2024',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2024/117/index.html',
-  },
-  'sputnikovaya-svyaz-i-veschanie': {
-    slug: 'satellite-communications-and-broadcasting-2023',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2023/index.html',
-  },
+const redirects = publicationRedirects as Record<string, string>;
+
+const publicationRoutes: Record<string, { slug: string }> = {
+  '612-2': { slug: 'satellite-communications-and-broadcasting-2025' },
+  'modernizatsiya-psss-drive-away': { slug: 'drive-away-station-modernization-2025' },
+  'novye-produkty-2': { slug: 'new-products-2025' },
+  'sputnikovaya-svyaz-i-veschanie-2024': { slug: 'satellite-communications-and-broadcasting-2024' },
+  'postavka-produktsii-sobstvennoy-razrabotki': { slug: 'in-house-products-2024' },
+  'novye-produkty-2024': { slug: 'new-products-2024' },
+  'sputnikovaya-svyaz-i-veschanie': { slug: 'satellite-communications-and-broadcasting-2023' },
   'razrabotka-i-postavka-oborudovaniya-sputnikovoy-svyazi-5': {
     slug: 'mobile-satellite-station-modernization-2023',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2023/54/index.html',
   },
   'razrabotka-i-postavka-oborudovaniya-sputnikovoy-svyazi-4': {
     slug: 'multi-satellite-communications-systems-2023',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2023/76/index.html',
   },
-  'novye-produkty': {
-    slug: 'new-products-2023',
-    externalUrl: 'https://cs.groteck.ru/SATCOM_2023/96/index.html',
-  },
+  'novye-produkty': { slug: 'new-products-2023' },
 };
 
 const publicationImageModules = import.meta.glob<{ default: ImageMetadata }>(
@@ -66,8 +43,9 @@ export async function getPublications(): Promise<PublicationRecord[]> {
     .map((entry) => {
       const image = publicationImages.get(entry.data.coverImage);
       const route = publicationRoutes[entry.id];
-      if (!image || !route) throw new Error(`Incomplete publication mapping: ${entry.id}`);
-      return { entry, image, ...route };
+      const externalUrl = redirects[route.slug];
+      if (!image || !externalUrl) throw new Error(`Incomplete publication mapping: ${entry.id}`);
+      return { entry, image, slug: route.slug, externalUrl };
     })
     .sort((a, b) => b.entry.data.date.valueOf() - a.entry.data.date.valueOf());
 }

@@ -1,4 +1,6 @@
 ---
+import company from '../data/company.json';
+
 const base = import.meta.env.BASE_URL;
 const navigation = [
   { href: '', label: 'Главная' },
@@ -19,8 +21,8 @@ const isCurrent = (href: string) => {
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href={base} aria-label="Лаборатория микроволн, главная">
-      <img src={`${base}assets/logo.png`} width="320" height="75" alt="Лаборатория микроволн" />
+    <a class="brand" href={base} aria-label="Лаборатория Микроволн, главная">
+      <img src={`${base}assets/logo.png`} width="320" height="75" alt="Лаборатория Микроволн" />
     </a>
     <nav class="desktop-nav" aria-label="Основная навигация">
       {
@@ -32,8 +34,8 @@ const isCurrent = (href: string) => {
       }
     </nav>
     <div class="header-contact">
-      <a href="tel:+79175012121">+7 (917) 501-2121</a>
-      <a href="mailto:info@mw-lab.ru" class="header-mail">info@mw-lab.ru</a>
+      <a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a>
+      <a href={`mailto:${company.email}`}>{company.email}</a>
     </div>
     <details class="mobile-nav">
       <summary>Меню</summary>
@@ -45,7 +47,7 @@ const isCurrent = (href: string) => {
             </a>
           ))
         }
-        <a href="tel:+79175012121">+7 (917) 501-2121</a>
+        <a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a>
       </nav>
     </details>
   </div>
