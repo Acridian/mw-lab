@@ -11,7 +11,7 @@ npm run check
 npm run verify
 ```
 
-`npm run verify` type-checks, builds, checks all 43 product outputs and legacy routes, validates publication redirects, form markup, search metadata, and the company PDF, and rejects old template strings and fake document links.
+`npm run verify` type-checks, builds, checks all 43 product outputs and legacy routes, validates publication redirects, search metadata, and the company PDF, and rejects old template strings and fake document links.
 
 ## Content
 
@@ -24,7 +24,3 @@ npm run verify
 - `ASSET-CREDITS.md`: provenance and reuse terms for third-party visual assets.
 
 Do not rewrite imported Markdown as part of visual work. Make approved copy corrections as separate, reviewable changes.
-
-## Forms
-
-The contact form uses Netlify Forms. It works after a Netlify deploy and appears as the `contact` form in the Netlify dashboard. For another host, replace the form transport before DNS cutover; see `MIGRATION.md`.

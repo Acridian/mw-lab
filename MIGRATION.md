@@ -11,7 +11,7 @@ Migrated:
 - All 43 product titles, slugs, dates, primary images, descriptions, and supply conditions.
 - Ten publication titles, dates, covers, and external reader destinations.
 - Current public phone, email, and contact address.
-- A site-specific privacy-policy draft describing the current form flow.
+- A site-specific privacy-policy draft.
 - Current company-card PDF.
 - English canonical paths with permanent redirects from the legacy WordPress URLs.
 
@@ -52,33 +52,13 @@ Responsive styles cover desktop, tablet, and mobile; keyboard focus and reduced-
 
 ### 1. Privacy Policy
 
-The WordPress boilerplate (Gravatar, comments, accounts, login cookies, `Предлагаемый текст`) has been replaced with a site-specific draft that describes only the actual data flow: the contact form (name, phone, email, message), no cookies, no analytics, no accounts.
+The WordPress boilerplate (Gravatar, comments, accounts, login cookies, `Предлагаемый текст`) has been replaced with a site-specific draft that describes only the actual data flow: phone and email contact, no cookies, no analytics, no accounts.
 
 The draft is written in plain language but has not been reviewed by a lawyer. Obtain approved legal wording before launch; the page structure makes substitution a single-file change in `src/content/pages/privacy-policy.md`.
 
-### 2. Form Delivery
+### 2. Product Galleries And Documents
 
-The current implementation uses Netlify Forms with required name, phone, and consent fields. It preserves the visible Contact Form 7 field set and sends users to `/thank-you/` after successful submission.
-
-If hosting on Netlify:
-
-1. Deploy a preview.
-2. Confirm the `contact` form appears in the Netlify dashboard.
-3. Configure notifications to `info@mw-lab.ru`.
-4. Submit test data and verify delivery, spam handling, and consent capture.
-
-If hosting on a VPS, Vercel, Cloudflare, or another platform, replace Netlify Forms with an approved serverless endpoint or mail provider. Do not launch with an untested form.
-
-### 3. Product Galleries And Documents
-
-The export contains 120 product images. The initial build uses the verified primary image for every product and keeps the remaining source files available for a reviewed gallery-mapping pass.
-
-The live WordPress pages reference product PDFs and some third-party media that were not present in the repository export. Before WordPress is retired:
-
-1. Export the WordPress uploads directory or retrieve the 71 real PDF targets from the live pages.
-2. Create an approved product-to-gallery/document manifest.
-3. Verify image ownership for third-party manufacturers.
-4. Add only files whose product association is certain.
+The live WordPress pages reference product images and PDFs. A per-product manifest at `src/data/product-assets.json` maps each product to its gallery images and downloadable documents. Gallery images are stored in `src/assets/images/products/` and PDFs in `public/downloads/products/`. This manifest was scraped from the live site and should be reviewed for accuracy before launch.
 
 ### 4. Business Facts
 
@@ -90,15 +70,14 @@ The unverifiable legacy counters (`28`, `11`, `83`) were removed from the homepa
 
 1. Run `npm run verify`.
 2. Run `npm run dev` and review `/`, `/catalog/`, one page from each category, `/publications/`, `/contact/`, and `/privacy-policy/` at desktop and phone widths.
-3. Approve the legal policy and form transport.
-4. Test form delivery in the final hosting environment.
-5. Crawl the preview and compare all legacy sitemap URLs against the new deployment.
-6. Back up the WordPress database and full `wp-content/uploads` directory.
-7. Lower DNS TTL at least 24 hours before cutover.
-8. Deploy the static site, attach `mw-lab.ru`, and enforce HTTPS plus the non-`www` canonical host.
-9. Re-submit `https://mw-lab.ru/sitemap-index.xml` in search tools.
-10. Monitor 404s, form submissions, and search coverage for at least two weeks before deleting the WordPress server.
+3. Approve the legal policy.
+4. Crawl the preview and compare all legacy sitemap URLs against the new deployment.
+5. Back up the WordPress database and full `wp-content/uploads` directory.
+6. Lower DNS TTL at least 24 hours before cutover.
+7. Deploy the static site, attach `mw-lab.ru`, and enforce HTTPS plus the non-`www` canonical host.
+8. Re-submit `https://mw-lab.ru/sitemap-index.xml` in search tools.
+9. Monitor 404s and search coverage for at least two weeks before deleting the WordPress server.
 
 ## Rollback
 
-Keep the WordPress host intact during the monitoring window. A rollback is a DNS or reverse-proxy switch back to WordPress; do not destroy the database/uploads backup until the static site and form have been stable for at least two weeks.
+Keep the WordPress host intact during the monitoring window. A rollback is a DNS or reverse-proxy switch back to WordPress; do not destroy the database/uploads backup until the static site has been stable for at least two weeks.

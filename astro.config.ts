@@ -5,11 +5,7 @@ export default defineConfig({
   site: 'https://mw-lab.ru',
   output: 'static',
   trailingSlash: 'always',
-  integrations: [
-    sitemap({
-      filter: (page) => page !== 'https://mw-lab.ru/thank-you/',
-    }),
-  ],
+  integrations: [sitemap()],
   redirects: {
     '/publications/satellite-communications-and-broadcasting-2025/':
       'https://cs.groteck.ru/SATCOM_2025/index.html',

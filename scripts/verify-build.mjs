@@ -31,7 +31,6 @@ const categoryRoutes = [
 const legacyRouteRedirects = {
   '/publikatsii/': '/publications/',
   '/kontakty/': '/contact/',
-  '/spasibo/': '/thank-you/',
   '/downloads/kartochka-mwlab.pdf': '/downloads/company-details.pdf',
   '/tovary/generatory/': '/products/signal-generators/',
   '/tovary/kommutatory-signalov/': '/products/signal-switches/',
@@ -80,7 +79,6 @@ const expectedRoutes = [
   'publications/index.html',
   'contact/index.html',
   'privacy-policy/index.html',
-  'thank-you/index.html',
   '404.html',
   ...categoryRoutes.map((slug) => `products/${slug}/index.html`),
   ...Object.keys(publicationRedirects).map((slug) => `publications/${slug}/index.html`),
@@ -143,7 +141,7 @@ const contactHtml = await readFile(path.join(root, 'dist/contact/index.html'), '
 if (!contactHtml.includes('yandex-map')) throw new Error('Contact page is missing Yandex map');
 if (!contactHtml.includes('Карточка предприятия')) throw new Error('Contact page is missing PDF link');
 
-for (const route of ['thank-you/index.html', '404.html']) {
+for (const route of ['404.html']) {
   const html = await readFile(path.join(root, 'dist', route), 'utf8');
   if (!html.includes('name="robots" content="noindex, follow"')) {
     throw new Error(`${route} must be noindex`);
@@ -163,8 +161,6 @@ const sitemap = (
 ).join('\n');
 if (!sitemap.includes('<loc>https://mw-lab.ru/catalog/</loc>'))
   throw new Error('Catalog is missing from sitemap');
-if (sitemap.includes('<loc>https://mw-lab.ru/thank-you/</loc>'))
-  throw new Error('Thank-you page must not be in sitemap');
 for (const oldPath of forbiddenInternalPaths) {
   if (sitemap.includes(`<loc>https://mw-lab.ru${oldPath}`)) {
     throw new Error(`Legacy URL must not appear in sitemap: ${oldPath}`);
@@ -172,5 +168,5 @@ for (const oldPath of forbiddenInternalPaths) {
 }
 
 console.log(
-  `Verified ${productFiles.length} products, ${expectedRoutes.length} routes, redirects, form, and search metadata.`,
+  `Verified ${productFiles.length} products, ${expectedRoutes.length} routes, redirects, and search metadata.`,
 );
