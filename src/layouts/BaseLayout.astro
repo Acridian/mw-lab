@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import company from '../data/company.json';
+import yandex from '../data/yandex.json';
 
 interface Props {
   title: string;
@@ -64,6 +65,25 @@ const organization = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
+    {yandex.verification && <meta name="yandex-verification" content={yandex.verification} />}
+    {
+      yandex.metricaId && (
+        <>
+          <script type="text/javascript" is:inline>
+            {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");ym(${yandex.metricaId}, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:false});`.trim()}
+          </script>
+          <noscript>
+            <div>
+              <img
+                src={`https://mc.yandex.ru/watch/${yandex.metricaId}`}
+                style="position:absolute;left:-9999px"
+                alt=""
+              />
+            </div>
+          </noscript>
+        </>
+      )
+    }
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
