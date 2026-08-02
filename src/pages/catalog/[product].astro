@@ -3,11 +3,11 @@ import { getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductGallery from '../../components/ProductGallery.astro';
-import { SITE_URL, COMPANY_NAME } from '../../data/company';
+import company from '../../data/company.json';
 import { getProducts, type ProductRecord } from '../../lib/catalog';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 export async function getStaticPaths() {
   const products = await getProducts();
@@ -38,7 +38,7 @@ const productSchema = {
   image: new URL(ogImage.src, siteUrl).href,
   brand: {
     '@type': 'Brand',
-    name: COMPANY_NAME,
+    name: company.name,
   },
 };
 
@@ -48,7 +48,12 @@ const breadcrumbSchema = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Главная', item: siteUrl },
     { '@type': 'ListItem', position: 2, name: 'Продукция', item: `${siteUrl}catalog/` },
-    { '@type': 'ListItem', position: 3, name: product.category.title, item: `${siteUrl}products/${product.category.slug}/` },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: product.category.title,
+      item: `${siteUrl}products/${product.category.slug}/`,
+    },
     { '@type': 'ListItem', position: 4, name: product.entry.data.title },
   ],
 };
@@ -58,42 +63,58 @@ const breadcrumbSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <div class="shell product-detail">
-    <div class:list={{
-      'product-visual-wrap': true,
-    }}>
+    <div
+      class:list={{
+        'product-visual-wrap': true,
+      }}
+    >
       <ProductGallery images={product.gallery} title={product.entry.data.title} />
     </div>
     <article class="product-copy">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a><span
-          aria-hidden="true">/</span
-        ><a href={`${base}products/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
-          >/</span
-        ><span aria-current="page">{product.entry.data.title}</span>
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a
+        ><span aria-hidden="true">/</span><a href={`${base}products/${product.category.slug}/`}
+          >{product.category.title}</a
+        ><span aria-hidden="true">/</span><span aria-current="page">{product.entry.data.title}</span>
       </nav>
       <p class="eyebrow">{product.category.title}</p>
       <h1>{product.entry.data.title}</h1>
       <div class="rich-copy"><Content /></div>
-      {product.documents.length > 0 && (
-        <div class="product-docs">
-          <h2 class="product-docs-title">Документы</h2>
-          <ul class="product-docs-list">
-            {product.documents.map((doc) => (
-              <li>
-                <a
-                  href={`${base}downloads/products/${doc.filename}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="product-doc-link"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
-                  <span>{doc.label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {
+        product.documents.length > 0 && (
+          <div class="product-docs">
+            <h2 class="product-docs-title">Документы</h2>
+            <ul class="product-docs-list">
+              {product.documents.map((doc) => (
+                <li>
+                  <a
+                    href={`${base}downloads/products/${doc.filename}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-doc-link"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="12" y1="18" x2="12" y2="12" />
+                      <polyline points="9 15 12 18 15 15" />
+                    </svg>
+                    <span>{doc.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
       <div class="product-inquiry">
         <p>
           <strong>Заинтересовало изделие или остались вопросы?</strong><br />Актуальные сроки и наличие

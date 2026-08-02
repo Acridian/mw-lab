@@ -164,7 +164,9 @@ export async function getProducts(): Promise<ProductRecord[]> {
     const slug = (productRoutes as Record<string, string>)[entry.id];
     if (!slug) throw new Error(`Product has no English route: ${entry.id}`);
 
-    const assets = (productAssets as Record<string, { gallery: string[]; documents: { label: string; filename: string }[] }>)[entry.id];
+    const assets = (
+      productAssets as Record<string, { gallery: string[]; documents: { label: string; filename: string }[] }>
+    )[entry.id];
     const galleryImages: ImageMetadata[] = [];
     if (assets?.gallery) {
       for (const filename of assets.gallery) {

@@ -3,10 +3,10 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { getPublications } from '../../lib/publications';
-import { SITE_URL } from '../../data/company';
+import company from '../../data/company.json';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 const publications = await getPublications();
 const dateFormat = new Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });

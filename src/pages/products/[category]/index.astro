@@ -2,7 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import ContactCta from '../../../components/ContactCta.astro';
-import { SITE_URL } from '../../../data/company';
+import company from '../../../data/company.json';
 import {
   categories,
   getProductsByCategory,
@@ -12,7 +12,7 @@ import {
 import { plural } from '../../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 export async function getStaticPaths() {
   return Promise.all(
@@ -46,9 +46,8 @@ const breadcrumbSchema = {
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a><span
-          aria-hidden="true">/</span
-        ><span aria-current="page">{category.title}</span>
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a
+        ><span aria-hidden="true">/</span><span aria-current="page">{category.title}</span>
       </nav>
       <p class="eyebrow">
         Каталог · {products.length}

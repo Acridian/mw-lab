@@ -1,10 +1,10 @@
 ---
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SITE_URL } from '../../data/company';
+import company from '../../data/company.json';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 const page = await getEntry('pages', 'privacy-policy');
 if (!page) throw new Error('Privacy policy content is missing');
@@ -20,7 +20,10 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout title={page.data.title} description="Политика конфиденциальности сайта mw-lab.ru">
+<BaseLayout
+  title={page.data.title}
+  description={`Политика конфиденциальности сайта ${company.siteUrl.replace('https://', '')}`}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="page-hero">
     <div class="shell">

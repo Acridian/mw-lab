@@ -1,10 +1,6 @@
 {
   "blok-generatora-i-interfeysov-bgi": {
-    "gallery": [
-      "bgi-scaled.jpg",
-      "bgi1-scaled.jpg",
-      "bgi2-scaled.jpg"
-    ],
+    "gallery": ["bgi-scaled.jpg", "bgi1-scaled.jpg", "bgi2-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -17,9 +13,7 @@
     ]
   },
   "blok-geterodina-bg3131": {
-    "gallery": [
-      "img_20170731_144212.jpg"
-    ],
+    "gallery": ["img_20170731_144212.jpg"],
     "documents": [
       {
         "label": "Паспорт",
@@ -28,10 +22,7 @@
     ]
   },
   "blok-geterodina-bg3636": {
-    "gallery": [
-      "img_1948.jpg",
-      "korpus2.jpg"
-    ],
+    "gallery": ["img_1948.jpg", "korpus2.jpg"],
     "documents": [
       {
         "label": "Паспорт",
@@ -40,10 +31,7 @@
     ]
   },
   "blok-geterodina-upravlyaemyy-bgu1820-opytnyy-obrazets": {
-    "gallery": [
-      "img_1947-scaled.jpg",
-      "korpus2.jpg"
-    ],
+    "gallery": ["img_1947-scaled.jpg", "korpus2.jpg"],
     "documents": [
       {
         "label": "Паспорт",
@@ -56,16 +44,11 @@
     ]
   },
   "blok-kommutatsii-i-rezervirovaniya-bkr0917-4h2": {
-    "gallery": [
-      "brip300-48-scaled.jpg"
-    ],
+    "gallery": ["brip300-48-scaled.jpg"],
     "documents": []
   },
   "blok-nagruzki-bnwr75-250": {
-    "gallery": [
-      "bnwr75-450-1-scaled.jpg",
-      "bnwr75-450-scaled.jpg"
-    ],
+    "gallery": ["bnwr75-450-1-scaled.jpg", "bnwr75-450-scaled.jpg"],
     "documents": []
   },
   "blok-rezervirovannogo-generatora-brg10h8": {
@@ -115,10 +98,7 @@
     ]
   },
   "fidernye-kabelnye-sborki": {
-    "gallery": [
-      "img_6616-scaled.jpg",
-      "img_6619-scaled.jpg"
-    ],
+    "gallery": ["img_6616-scaled.jpg", "img_6619-scaled.jpg"],
     "documents": [
       {
         "label": "FSJ1-50A",
@@ -139,31 +119,19 @@
     ]
   },
   "gibkiy-volnovod-wr112": {
-    "gallery": [
-      "wr112-scaled.jpg",
-      "cpr112.jpg"
-    ],
+    "gallery": ["wr112-scaled.jpg", "cpr112.jpg"],
     "documents": []
   },
   "gibkiy-volnovod-wr75": {
-    "gallery": [
-      "wr75-scaled.jpg",
-      "wr75-1-scaled.jpg"
-    ],
+    "gallery": ["wr75-scaled.jpg", "wr75-1-scaled.jpg"],
     "documents": []
   },
   "kabelnye-sborki": {
-    "gallery": [
-      "n-lmr240uf-n-scaled.jpg",
-      "lmr240.jpg"
-    ],
+    "gallery": ["n-lmr240uf-n-scaled.jpg", "lmr240.jpg"],
     "documents": []
   },
   "kommutator-mikrotik-crs310-1g-5s-4s-in-upravlyaemyy-8": {
-    "gallery": [
-      "bks-vkl-scaled.jpg",
-      "img_2587-scaled.jpg"
-    ],
+    "gallery": ["bks-vkl-scaled.jpg", "img_2587-scaled.jpg"],
     "documents": []
   },
   "kommutator-mikrotik-crs310-1g-5s-4s-in-upravlyaemyy-9": {
@@ -186,10 +154,7 @@
     ]
   },
   "komplekt-zaschity-ot-atmosfernyh-vozdeystviy-dlya-razemov-i-antenn": {
-    "gallery": [
-      "germokompect2-scaled.jpg",
-      "germokomlect1-scaled.jpeg"
-    ],
+    "gallery": ["germokompect2-scaled.jpg", "germokomlect1-scaled.jpeg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -202,10 +167,7 @@
     ]
   },
   "konvertor-bpr0915-7884": {
-    "gallery": [
-      "brg10-scaled.jpg",
-      "brg10-lev-scaled.jpg"
-    ],
+    "gallery": ["brg10-scaled.jpg", "brg10-lev-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -222,11 +184,7 @@
     ]
   },
   "konvertor-bpr0917-1314-40": {
-    "gallery": [
-      "buc-40-1-scaled.jpg",
-      "buc-40-2-scaled.jpg",
-      "bpr0917-1314-40.jpg"
-    ],
+    "gallery": ["buc-40-1-scaled.jpg", "buc-40-2-scaled.jpg", "bpr0917-1314-40.jpg"],
     "documents": [
       {
         "label": "Габаритный чертеж",
@@ -239,9 +197,7 @@
     ]
   },
   "konvertor-bpr0917-1314og": {
-    "gallery": [
-      "bpr0917-1314g-scaled.jpg"
-    ],
+    "gallery": ["bpr0917-1314g-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -250,9 +206,7 @@
     ]
   },
   "konvertor-bpr0917-5765m": {
-    "gallery": [
-      "img_1973-scaled.jpg"
-    ],
+    "gallery": ["img_1973-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -265,10 +219,7 @@
     ]
   },
   "konvertor-bpr2222-8485": {
-    "gallery": [
-      "bpr8485-2222-1-scaled.jpg",
-      "bpr8485-2222-2-scaled.jpg"
-    ],
+    "gallery": ["bpr8485-2222-1-scaled.jpg", "bpr8485-2222-2-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -281,10 +232,7 @@
     ]
   },
   "konvertor-bpr7475-1112": {
-    "gallery": [
-      "brg10-scaled.jpg",
-      "brg10-lev-scaled.jpg"
-    ],
+    "gallery": ["brg10-scaled.jpg", "brg10-lev-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -301,10 +249,7 @@
     ]
   },
   "konvertor-bpr8485-2222": {
-    "gallery": [
-      "bpr2222-8485-1-scaled.jpg",
-      "bpr2222-8485-2-scaled.jpg"
-    ],
+    "gallery": ["bpr2222-8485-1-scaled.jpg", "bpr2222-8485-2-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -321,31 +266,19 @@
     ]
   },
   "nagruzka-bn-wr62g-1000": {
-    "gallery": [
-      "bn-wr62-1000-scaled.jpg",
-      "bn-wr62-1000-1-scaled.jpg"
-    ],
+    "gallery": ["bn-wr62-1000-scaled.jpg", "bn-wr62-1000-1-scaled.jpg"],
     "documents": []
   },
   "nagruzka-volnovodnaya-bn-wr75-0-5": {
-    "gallery": [
-      "wr75-1-scaled.jpg",
-      "wr75-2-scaled.jpg",
-      "wr75-3-scaled.jpg"
-    ],
+    "gallery": ["wr75-1-scaled.jpg", "wr75-2-scaled.jpg", "wr75-3-scaled.jpg"],
     "documents": []
   },
   "nagruzka-volnovodnaya-bn-wr75-250": {
-    "gallery": [
-      "bn-wr75-250-scaled.jpg"
-    ],
+    "gallery": ["bn-wr75-250-scaled.jpg"],
     "documents": []
   },
   "pereklyuchatel-volnovodnyy-ast75w": {
-    "gallery": [
-      "astw75-1-scaled.jpg",
-      "ast75w-scaled.jpg"
-    ],
+    "gallery": ["astw75-1-scaled.jpg", "ast75w-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -358,9 +291,7 @@
     ]
   },
   "poluzhestkie-kabelnye-sborki": {
-    "gallery": [
-      "ez141-scaled.jpg"
-    ],
+    "gallery": ["ez141-scaled.jpg"],
     "documents": []
   },
   "rezervirovannyy-usilitel-moschnosti-um2021-100r": {
@@ -397,12 +328,7 @@
     ]
   },
   "splitter-rs0825-1nx2n": {
-    "gallery": [
-      "pc-1x2-1-scaled.jpg",
-      "pc1x2-2-scaled.jpg",
-      "pc1x2-3-scaled.jpg",
-      "pc1x2-4-scaled.jpg"
-    ],
+    "gallery": ["pc-1x2-1-scaled.jpg", "pc1x2-2-scaled.jpg", "pc1x2-3-scaled.jpg", "pc1x2-4-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -419,10 +345,7 @@
     ]
   },
   "splitter-rs0825-1sx2s": {
-    "gallery": [
-      "img_4959-scaled.jpg",
-      "img_4960-scaled.jpg"
-    ],
+    "gallery": ["img_4959-scaled.jpg", "img_4960-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -439,10 +362,7 @@
     ]
   },
   "usilitel-moschnosti-um0101-10": {
-    "gallery": [
-      "img_2961-scaled.jpg",
-      "img_2963-scaled.jpg"
-    ],
+    "gallery": ["img_2961-scaled.jpg", "img_2963-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -455,9 +375,7 @@
     ]
   },
   "usilitel-moschnosti-um0404-70": {
-    "gallery": [
-      "um1822-12-1-scaled.jpg"
-    ],
+    "gallery": ["um1822-12-1-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
@@ -560,10 +478,7 @@
     ]
   },
   "usilitel-moschnosti-um5860-2": {
-    "gallery": [
-      "um5860-2-scaled.jpg",
-      "um5860-2-1-scaled.jpg"
-    ],
+    "gallery": ["um5860-2-scaled.jpg", "um5860-2-1-scaled.jpg"],
     "documents": [
       {
         "label": "Габаритный чертеж",
@@ -587,24 +502,15 @@
     ]
   },
   "volnovodnaya-vstavka": {
-    "gallery": [
-      "wr62-2-scaled.jpg",
-      "wr62-1-scaled.jpg"
-    ],
+    "gallery": ["wr62-2-scaled.jpg", "wr62-1-scaled.jpg"],
     "documents": []
   },
   "volnovodnaya-vstavka-wr75": {
-    "gallery": [
-      "wr75-ugolok-scaled.jpg",
-      "wr75-1-ugolok-scaled.jpg"
-    ],
+    "gallery": ["wr75-ugolok-scaled.jpg", "wr75-1-ugolok-scaled.jpg"],
     "documents": []
   },
   "volnovodnye-pereklyuchateli": {
-    "gallery": [
-      "pv-1-scaled.jpg",
-      "pv-2-scaled.jpg"
-    ],
+    "gallery": ["pv-1-scaled.jpg", "pv-2-scaled.jpg"],
     "documents": [
       {
         "label": "Габаритный чертеж CPR229",
@@ -621,17 +527,11 @@
     ]
   },
   "volnovodnyy-adapter-wr75g-wr62g": {
-    "gallery": [
-      "wr75-wr62-scaled.jpg",
-      "wr62-wr75-scaled.jpg"
-    ],
+    "gallery": ["wr75-wr62-scaled.jpg", "wr62-wr75-scaled.jpg"],
     "documents": []
   },
   "volnovodnyy-pereklyuchatel-mm137": {
-    "gallery": [
-      "mm137-1-scaled.jpg",
-      "mm137-scaled.jpg"
-    ],
+    "gallery": ["mm137-1-scaled.jpg", "mm137-scaled.jpg"],
     "documents": [
       {
         "label": "Полное описание",
