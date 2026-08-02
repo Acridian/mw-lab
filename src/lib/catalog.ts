@@ -170,7 +170,7 @@ export async function getProducts(): Promise<ProductRecord[]> {
         try {
           galleryImages.push(getProductImage(filename));
         } catch {
-          // Image file not present locally – skip
+          console.warn(`Gallery image not found for ${entry.id}: ${filename}`);
         }
       }
     }

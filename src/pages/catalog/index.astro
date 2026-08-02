@@ -3,16 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import CategoryCard from '../../components/CategoryCard.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { categories } from '../../lib/catalog';
+import { plural } from '../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
-
-const plural = (n: number, one: string, few: string, many: string) => {
-  const m10 = n % 10,
-    m100 = n % 100;
-  if (m10 === 1 && m100 !== 11) return one;
-  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
-  return many;
-};
 
 const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
 ---
@@ -40,7 +33,7 @@ const productCount = categories.reduce((sum, category) => sum + category.product
   </header>
   <section class="section">
     <div class="shell category-grid">
-      {categories.map((category, index) => <CategoryCard {category} {index} />)}
+      {categories.map((category) => <CategoryCard {category} />)}
     </div>
   </section>
   <ContactCta />

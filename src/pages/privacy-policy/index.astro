@@ -22,7 +22,7 @@ const { Content } = await render(page);
     </div>
   </header>
   <div class="shell legal-layout">
-    <aside class="legal-note">Редакция 02.08.2026</aside>
+    <aside class="legal-note">Редакция {page.data.date.toLocaleDateString('ru-RU')}</aside>
     <article class="legal-copy rich-copy"><Content /></article>
   </div>
 </BaseLayout>

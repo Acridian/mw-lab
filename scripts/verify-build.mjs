@@ -6,18 +6,9 @@ const productsDirectory = path.join(root, 'src/content/products');
 const productFiles = (await readdir(productsDirectory)).filter((file) => file.endsWith('.md'));
 const productRoutes = JSON.parse(await readFile(path.join(root, 'src/data/product-routes.json'), 'utf8'));
 
-const publicationRedirects = {
-  'satellite-communications-and-broadcasting-2025': 'https://cs.groteck.ru/SATCOM_2025/index.html',
-  'drive-away-station-modernization-2025': 'https://cs.groteck.ru/SATCOM_2025/68/index.html',
-  'new-products-2025': 'https://cs.groteck.ru/SATCOM_2025/104/index.html',
-  'satellite-communications-and-broadcasting-2024': 'https://cs.groteck.ru/SATCOM_2024/index.html',
-  'in-house-products-2024': 'https://cs.groteck.ru/SATCOM_2024/85/index.html',
-  'new-products-2024': 'https://cs.groteck.ru/SATCOM_2024/117/index.html',
-  'satellite-communications-and-broadcasting-2023': 'https://cs.groteck.ru/SATCOM_2023/index.html',
-  'mobile-satellite-station-modernization-2023': 'https://cs.groteck.ru/SATCOM_2023/54/index.html',
-  'multi-satellite-communications-systems-2023': 'https://cs.groteck.ru/SATCOM_2023/76/index.html',
-  'new-products-2023': 'https://cs.groteck.ru/SATCOM_2023/96/index.html',
-};
+const publicationRedirects = JSON.parse(
+  await readFile(path.join(root, 'src/data/publication-redirects.json'), 'utf8'),
+);
 
 const categoryRoutes = [
   'signal-generators',

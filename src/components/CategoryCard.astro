@@ -1,20 +1,19 @@
 ---
 import { Image } from 'astro:assets';
 import { getProductImage, type ProductCategory } from '../lib/catalog';
+import { plural } from '../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
 
 interface Props {
   category: ProductCategory;
-  index: number;
   headingLevel?: 'h2' | 'h3';
 }
 
 const { category, headingLevel = 'h3' } = Astro.props;
 const Heading = headingLevel;
 const count = category.productSlugs.length;
-const productCount =
-  count === 1 ? '1 продукт' : count >= 2 && count <= 4 ? `${count} продукта` : `${count} продуктов`;
+const productCount = `${count} ${plural(count, 'продукт', 'продукта', 'продуктов')}`;
 ---
 
 <a class="category-card" href={`${base}products/${category.slug}/`}>

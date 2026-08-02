@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import ContactCta from '../components/ContactCta.astro';
 import { categories } from '../lib/catalog';
+import { plural } from '../lib/i18n';
 import aboutImage from '../assets/images/company/about-years.jpg';
 
 const base = import.meta.env.BASE_URL;
@@ -11,13 +12,6 @@ const base = import.meta.env.BASE_URL;
 const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
 const foundedYear = 2012;
 const years = new Date().getFullYear() - foundedYear;
-const plural = (n: number, one: string, few: string, many: string) => {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod10 === 1 && mod100 !== 11) return one;
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
-  return many;
-};
 ---
 
 <BaseLayout
@@ -54,7 +48,7 @@ const plural = (n: number, one: string, few: string, many: string) => {
         </p>
       </div>
       <div class="category-grid">
-        {categories.map((category, index) => <CategoryCard {category} {index} headingLevel="h3" />)}
+        {categories.map((category) => <CategoryCard {category} headingLevel="h3" />)}
       </div>
     </div>
   </section>
