@@ -30,7 +30,8 @@ export const categories: ProductCategory[] = [
   {
     slug: 'signal-generators',
     title: 'Генераторы сигналов',
-    description: 'Генераторы ВЧ и СВЧ-сигналов',
+    description:
+      'Генераторы ВЧ и СВЧ-сигналов: блоки гетеродинов, резервированные генераторы и формирователи опорных частот для наземных станций спутниковой связи',
     image: 'brg10-scaled.jpg',
     productSlugs: [
       'blok-geterodina-bg3131',
@@ -43,7 +44,8 @@ export const categories: ProductCategory[] = [
   {
     slug: 'signal-switches',
     title: 'Коммутаторы сигналов',
-    description: 'Коммутаторы сигналов L-диапазона',
+    description:
+      'Управляемые коммутаторы сигналов L-диапазона для построения отказоустойчивых трактов спутниковой связи с резервированием 1:1',
     image: 'img_4587-scaled.jpg',
     productSlugs: [
       'kommutator-mikrotik-crs310-1g-5s-4s-in-upravlyaemyy-9',
@@ -53,7 +55,8 @@ export const categories: ProductCategory[] = [
   {
     slug: 'frequency-converters',
     title: 'Преобразователи частоты',
-    description: 'Конверторы СВЧ-сигналов диапазонов C , Х , Ku.',
+    description:
+      'Конверторы и преобразователи СВЧ-сигналов диапазонов C, X, Ku для спутниковых систем связи и телекоммуникационного оборудования',
     image: 'bpr0816-5765mp-prim-scaled.jpg',
     productSlugs: [
       'konvertor-bpr0917-1314og',
@@ -67,7 +70,8 @@ export const categories: ProductCategory[] = [
   {
     slug: 'redundancy-systems',
     title: 'Системы резервирования 1:1',
-    description: 'Системы резервирования 1:1 и составные части',
+    description:
+      'Системы резервирования 1:1 для наземных станций спутниковой связи: блоки питания, волноводные нагрузки, переключатели и блоки коммутации',
     image: 'brip300-48-scaled.jpg',
     productSlugs: [
       'blok-rezervirovannogo-istochnika-pitaniya-brip300-48',
@@ -185,7 +189,7 @@ export async function getProducts(): Promise<ProductRecord[]> {
       return true;
     });
 
-    const copy = plainText(entry.body ?? '');
+    const copy = entry.data.description ?? plainText(entry.body ?? '');
     return {
       entry,
       slug,

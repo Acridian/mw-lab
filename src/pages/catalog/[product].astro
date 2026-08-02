@@ -3,9 +3,11 @@ import { getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductGallery from '../../components/ProductGallery.astro';
+import { SITE_URL, COMPANY_NAME } from '../../data/company';
 import { getProducts, type ProductRecord } from '../../lib/catalog';
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = SITE_URL;
 
 export async function getStaticPaths() {
   const products = await getProducts();
@@ -26,9 +28,35 @@ const ogImage = await getImage({
   background: '#ffffff',
   format: 'jpeg',
 });
+const description = product.entry.data.description ?? product.excerpt;
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.entry.data.title,
+  description,
+  image: new URL(ogImage.src, siteUrl).href,
+  brand: {
+    '@type': 'Brand',
+    name: COMPANY_NAME,
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Продукция', item: `${siteUrl}catalog/` },
+    { '@type': 'ListItem', position: 3, name: product.category.title, item: `${siteUrl}products/${product.category.slug}/` },
+    { '@type': 'ListItem', position: 4, name: product.entry.data.title },
+  ],
+};
 ---
 
-<BaseLayout title={product.entry.data.title} description={product.excerpt} image={ogImage.src}>
+<BaseLayout title={product.entry.data.title} description={description} image={ogImage.src}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <div class="shell product-detail">
     <div class:list={{
       'product-visual-wrap': true,

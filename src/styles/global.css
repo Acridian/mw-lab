@@ -1135,6 +1135,7 @@ textarea {
 
   .mobile-nav summary {
     padding: 12px 14px;
+    min-height: 48px;
     cursor: pointer;
     color: var(--cyan-strong);
     font-family: var(--font-mono);

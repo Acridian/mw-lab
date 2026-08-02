@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import ContactCta from '../../../components/ContactCta.astro';
+import { SITE_URL } from '../../../data/company';
 import {
   categories,
   getProductsByCategory,
@@ -11,6 +12,7 @@ import {
 import { plural } from '../../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = SITE_URL;
 
 export async function getStaticPaths() {
   return Promise.all(
@@ -27,9 +29,20 @@ interface Props {
 }
 
 const { category, products } = Astro.props;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Продукция', item: `${siteUrl}catalog/` },
+    { '@type': 'ListItem', position: 3, name: category.title },
+  ],
+};
 ---
 
 <BaseLayout title={category.title} description={category.description}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
