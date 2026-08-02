@@ -726,9 +726,8 @@ textarea {
 .publication-media {
   display: grid;
   place-items: center;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 5 / 7;
   padding: 14px;
-  overflow: hidden;
   background: var(--tray);
 }
 
@@ -958,6 +957,7 @@ textarea {
 
 .footer-brand img {
   width: 250px;
+  height: auto;
   opacity: 0.95;
 }
 
