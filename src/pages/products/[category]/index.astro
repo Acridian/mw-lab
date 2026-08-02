@@ -9,6 +9,14 @@ import {
   type ProductRecord,
 } from '../../../lib/catalog';
 
+const plural = (n: number, one: string, few: string, many: string) => {
+  const m10 = n % 10,
+    m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+};
+
 export async function getStaticPaths() {
   return Promise.all(
     categories.map(async (category) => ({
@@ -34,7 +42,10 @@ const { category, products } = Astro.props;
           aria-hidden="true">/</span
         ><span aria-current="page">{category.title}</span>
       </nav>
-      <p class="eyebrow">Каталог · {products.length} изделий</p>
+      <p class="eyebrow">
+        Каталог · {products.length}
+        {plural(products.length, 'изделие', 'изделия', 'изделий')}
+      </p>
       <h1 class="page-title">{category.title}</h1>
       <p class="page-lead">{category.description}</p>
     </div>

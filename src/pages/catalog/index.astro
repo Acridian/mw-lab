@@ -4,6 +4,14 @@ import CategoryCard from '../../components/CategoryCard.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { categories } from '../../lib/catalog';
 
+const plural = (n: number, one: string, few: string, many: string) => {
+  const m10 = n % 10,
+    m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+};
+
 const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
 ---
 
@@ -16,7 +24,11 @@ const productCount = categories.reduce((sum, category) => sum + category.product
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Продукция</span>
       </nav>
-      <p class="eyebrow">{productCount} изделия · {categories.length} направлений</p>
+      <p class="eyebrow">
+        {productCount}
+        {plural(productCount, 'изделие', 'изделия', 'изделий')} · {categories.length}
+        {plural(categories.length, 'направление', 'направления', 'направлений')}
+      </p>
       <h1 class="page-title">Наша продукция</h1>
       <p class="page-lead">
         Генераторы и конверторы СВЧ-сигналов, усилители мощности, коммутаторы, системы резервирования и

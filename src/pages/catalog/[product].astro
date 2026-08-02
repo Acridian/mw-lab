@@ -54,10 +54,7 @@ const ogImage = await getImage({
           <strong>Заинтересовало изделие или остались вопросы?</strong><br />Актуальные сроки и наличие
           уточняйте при запросе — ответим с предложением.
         </p>
-        <a
-          class="button"
-          href={`/contact/?product=${encodeURIComponent(product.entry.data.title)}#contact-form`}
-        >
+        <a class="button" href={`/contact/?product=${encodeURIComponent(product.entry.data.title)}`}>
           Отправить заявку
         </a>
       </div>
