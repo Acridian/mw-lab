@@ -130,6 +130,12 @@ const productImages = new Map(
   Object.entries(productImageModules).map(([path, module]) => [path.split('/').at(-1), module.default]),
 );
 
+const SAFE_FILENAME = /^[a-zA-Z0-9._-]+$/;
+
+function validateAssetFilename(filename: string): boolean {
+  return SAFE_FILENAME.test(filename) && !filename.includes('/') && !filename.includes('\\');
+}
+
 export function getProductImage(filename: string): ImageMetadata {
   const image = productImages.get(filename);
   if (!image) throw new Error(`Missing product image: ${filename}`);
@@ -158,6 +164,9 @@ export async function getProducts(): Promise<ProductRecord[]> {
     const galleryImages: ImageMetadata[] = [];
     if (assets?.gallery) {
       for (const filename of assets.gallery) {
+        if (!validateAssetFilename(filename)) {
+          throw new Error(`Invalid gallery filename for ${entry.id}: ${filename}`);
+        }
         try {
           galleryImages.push(getProductImage(filename));
         } catch {
@@ -169,6 +178,13 @@ export async function getProducts(): Promise<ProductRecord[]> {
       galleryImages.push(getProductImage(entry.data.coverImage));
     }
 
+    const documents = (assets?.documents ?? []).filter((doc) => {
+      if (!validateAssetFilename(doc.filename)) {
+        throw new Error(`Invalid document filename for ${entry.id}: ${doc.filename}`);
+      }
+      return true;
+    });
+
     const copy = plainText(entry.body ?? '');
     return {
       entry,
@@ -176,7 +192,7 @@ export async function getProducts(): Promise<ProductRecord[]> {
       category,
       image: getProductImage(entry.data.coverImage),
       gallery: galleryImages,
-      documents: assets?.documents ?? [],
+      documents,
       excerpt: copy.length > 190 ? `${copy.slice(0, 187).trim()}...` : copy,
     };
   });
