@@ -11,6 +11,8 @@ interface Props {
 }
 
 const { title, description, image = '/assets/og.png', noindex = false } = Astro.props;
+const isDeployPreview = ['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT ?? '');
+const robots = isDeployPreview ? 'noindex, nofollow' : noindex ? 'noindex, follow' : 'index, follow';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title.includes('Лаборатория микроволн') ? title : `${title} | Лаборатория микроволн`;
 const imageUrl = new URL(image, Astro.site);
@@ -40,7 +42,7 @@ const organization = {
     <meta name="generator" content={Astro.generator} />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <meta property="og:locale" content="ru_RU" />

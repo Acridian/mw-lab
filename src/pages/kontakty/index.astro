@@ -56,7 +56,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
         <div class="field-grid">
           <div class="field">
-            <label for="name">Ваше имя*</label><input id="name" name="name" required autocomplete="name" />
+            <label for="name">Ваше имя*</label><input
+              id="name"
+              name="name"
+              required
+              maxlength="100"
+              autocomplete="name"
+            />
           </div>
           <div class="field">
             <label for="phone">Номер телефона*</label><input
@@ -64,12 +70,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               name="phone"
               type="tel"
               required
+              maxlength="50"
               autocomplete="tel"
             />
           </div>
         </div>
         <div class="field">
-          <label for="email">E-Mail</label><input id="email" name="email" type="email" autocomplete="email" />
+          <label for="email">E-Mail</label><input
+            id="email"
+            name="email"
+            type="email"
+            maxlength="254"
+            autocomplete="email"
+          />
         </div>
         <div class="field">
           <label for="message">Сообщение</label><textarea id="message" name="message" maxlength="2000"

@@ -11,7 +11,7 @@ npm run check
 npm run verify
 ```
 
-`npm run verify` type-checks, builds, checks all 43 product outputs and primary legacy routes, rejects old template strings and fake document links, and confirms the company PDF is published.
+`npm run verify` type-checks, builds, checks all 43 product outputs and legacy routes, validates publication redirects, form markup, search metadata, and the company PDF, and rejects old template strings and fake document links.
 
 ## Content
 

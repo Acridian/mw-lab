@@ -5,7 +5,11 @@ export default defineConfig({
   site: 'https://mw-lab.ru',
   output: 'static',
   trailingSlash: 'always',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => page !== 'https://mw-lab.ru/spasibo/',
+    }),
+  ],
   redirects: {
     '/612-2/': 'https://cs.groteck.ru/SATCOM_2025/index.html',
     '/modernizatsiya-psss-drive-away/': 'https://cs.groteck.ru/SATCOM_2025/68/index.html',
