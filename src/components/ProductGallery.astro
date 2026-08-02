@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  images: ImageMetadata[];
+  title: string;
+}
+
+const { images, title } = Astro.props;
+---
+
+{images.length <= 1 && (
+  <div class="product-visual">
+    <Image
+      src={images[0]}
+      alt={title}
+      widths={[480, 720, 1000]}
+      sizes="(max-width: 980px) 100vw, 44vw"
+    />
+  </div>
+)}
+
+{images.length > 1 && (
+  <div class="product-gallery" data-gallery>
+    <div class="product-gallery-main">
+      <div class="product-gallery-slides" data-gallery-slides>
+        {images.map((img, i) => (
+          <div class="product-gallery-slide" data-gallery-slide={i}>
+            <Image
+              src={img}
+              alt={`${title} — фото ${i + 1} из ${images.length}`}
+              widths={[480, 720, 1000]}
+              sizes="(max-width: 980px) 100vw, 44vw"
+            />
+          </div>
+        ))}
+      </div>
+      <button class="product-gallery-nav product-gallery-prev" data-gallery-prev aria-label="Предыдущее изображение">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="product-gallery-nav product-gallery-next" data-gallery-next aria-label="Следующее изображение">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="product-gallery-thumbs" data-gallery-thumbs>
+      {images.map((img, i) => (
+        <button
+          class="product-gallery-thumb"
+          data-gallery-thumb={i}
+          aria-label={`Перейти к фото ${i + 1}`}
+        >
+          <Image
+            src={img}
+            alt=""
+            widths={[120]}
+            sizes="120px"
+          />
+        </button>
+      ))}
+    </div>
+  </div>
+)}
+
+<script>
+  function initGallery(root: HTMLElement) {
+    const slides = root.querySelectorAll<HTMLElement>('[data-gallery-slide]');
+    const thumbs = root.querySelectorAll<HTMLElement>('[data-gallery-thumb]');
+    const btnPrev = root.querySelector<HTMLElement>('[data-gallery-prev]');
+    const btnNext = root.querySelector<HTMLElement>('[data-gallery-next]');
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function show(index: number) {
+      current = ((index % slides.length) + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        s.style.display = i === current ? '' : 'none';
+        s.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+      thumbs.forEach((t, i) => t.classList.toggle('active', i === current));
+      if (btnPrev) btnPrev.style.visibility = current === 0 ? 'hidden' : '';
+      if (btnNext) btnNext.style.visibility = current === slides.length - 1 ? 'hidden' : '';
+    }
+
+    btnPrev?.addEventListener('click', () => show(current - 1));
+    btnNext?.addEventListener('click', () => show(current + 1));
+    thumbs.forEach((t, i) => t.addEventListener('click', () => show(i)));
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); }
+    });
+
+    show(0);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach(initGallery);
+</script>

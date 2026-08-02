@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import productRoutes from '../data/product-routes.json';
+import productAssets from '../data/product-assets.json';
 
 export interface ProductCategory {
   slug: string;
@@ -10,11 +11,18 @@ export interface ProductCategory {
   productSlugs: string[];
 }
 
+export interface ProductDocument {
+  label: string;
+  filename: string;
+}
+
 export interface ProductRecord {
   entry: CollectionEntry<'products'>;
   slug: string;
   category: ProductCategory;
   image: ImageMetadata;
+  gallery: ImageMetadata[];
+  documents: ProductDocument[];
   excerpt: string;
 }
 
@@ -146,12 +154,29 @@ export async function getProducts(): Promise<ProductRecord[]> {
     const slug = (productRoutes as Record<string, string>)[entry.id];
     if (!slug) throw new Error(`Product has no English route: ${entry.id}`);
 
+    const assets = (productAssets as Record<string, { gallery: string[]; documents: { label: string; filename: string }[] }>)[entry.id];
+    const galleryImages: ImageMetadata[] = [];
+    if (assets?.gallery) {
+      for (const filename of assets.gallery) {
+        try {
+          galleryImages.push(getProductImage(filename));
+        } catch {
+          // Image file not present locally – skip
+        }
+      }
+    }
+    if (galleryImages.length === 0) {
+      galleryImages.push(getProductImage(entry.data.coverImage));
+    }
+
     const copy = plainText(entry.body ?? '');
     return {
       entry,
       slug,
       category,
       image: getProductImage(entry.data.coverImage),
+      gallery: galleryImages,
+      documents: assets?.documents ?? [],
       excerpt: copy.length > 190 ? `${copy.slice(0, 187).trim()}...` : copy,
     };
   });

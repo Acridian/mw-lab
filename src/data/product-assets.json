@@ -1,0 +1,718 @@
+{
+  "blok-generatora-i-interfeysov-bgi": {
+    "gallery": [
+      "bgi-scaled.jpg",
+      "bgi1-scaled.jpg",
+      "bgi2-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "blok-generatora-i-interfeysov-bgi-2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/blok-generatora-i-interfeysov-bgi-2.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468782.004-blok-generatora-i-interfeysov-bgi.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/nrsd.468782.004-blok-generatora-i-interfeysov-bgi.pdf"
+      }
+    ]
+  },
+  "blok-geterodina-bg3131": {
+    "gallery": [
+      "img_20170731_144212.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Паспорт",
+        "filename": "ps-bg3131.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/ps-bg3131.pdf"
+      }
+    ]
+  },
+  "blok-geterodina-bg3636": {
+    "gallery": [
+      "img_1948.jpg",
+      "korpus2.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Паспорт",
+        "filename": "ps-bg3636.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/06/ps-bg3636.pdf"
+      }
+    ]
+  },
+  "blok-geterodina-upravlyaemyy-bgu1820-opytnyy-obrazets": {
+    "gallery": [
+      "img_1947-scaled.jpg",
+      "korpus2.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Паспорт",
+        "filename": "ps-bgu1823.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/06/ps-bgu1823.pdf"
+      },
+      {
+        "label": "Схема питания и управления",
+        "filename": "upravlenie-i-pitanie-bgu1823.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/06/upravlenie-i-pitanie-bgu1823.pdf"
+      }
+    ]
+  },
+  "blok-kommutatsii-i-rezervirovaniya-bkr0917-4h2": {
+    "gallery": [
+      "brip300-48-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "blok-nagruzki-bnwr75-250": {
+    "gallery": [
+      "bnwr75-450-1-scaled.jpg",
+      "bnwr75-450-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "blok-rezervirovannogo-generatora-brg10h8": {
+    "gallery": [
+      "brg10-scaled.jpg",
+      "brg10-zad-scaled.jpg",
+      "brg10-lev-scaled.jpg",
+      "brg10-prav-scaled.jpg",
+      "brg10-fas-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "novyy-dokument.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/novyy-dokument.pdf"
+      },
+      {
+        "label": "Протокол обмена RS485",
+        "filename": "protokol-obmena-brg10h8.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/protokol-obmena-brg10h8.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468782.001-blok-rezervirovannogo-generatora-brg10h8.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/01/nrsd.468782.001-blok-rezervirovannogo-generatora-brg10h8.pdf"
+      }
+    ]
+  },
+  "blok-rezervirovannogo-istochnika-pitaniya-brip300-48": {
+    "gallery": [
+      "brip300-48-scaled.jpg",
+      "brip300-48-1-scaled.jpg",
+      "brip300-48-2-scaled.jpg",
+      "brip300-48-3-scaled.jpg",
+      "brip300-48-4-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "brip300-48-2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/brip300-48-2.pdf"
+      },
+      {
+        "label": "Протокол обмена RS485",
+        "filename": "opisanie_1_0_brip300-48.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/opisanie_1_0_brip300-48.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.436237.001-blok-rezervirovannogo-inzhektora-pitaniya-brip300-48.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/nrsd.436237.001-blok-rezervirovannogo-inzhektora-pitaniya-brip300-48.pdf"
+      }
+    ]
+  },
+  "fidernye-kabelnye-sborki": {
+    "gallery": [
+      "img_6616-scaled.jpg",
+      "img_6619-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "FSJ1-50A",
+        "filename": "fsj1-50a-product-specifications.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/fsj1-50a-product-specifications.pdf"
+      },
+      {
+        "label": "LDF1-50A",
+        "filename": "35422-50-product-specifications.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/35422-50-product-specifications.pdf"
+      },
+      {
+        "label": "FSJ4-50B",
+        "filename": "fsj4-50b-product-specifications.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/fsj4-50b-product-specifications.pdf"
+      },
+      {
+        "label": "LDF4-50A",
+        "filename": "ldf4-50a-product-specifications.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/ldf4-50a-product-specifications.pdf"
+      }
+    ]
+  },
+  "gibkiy-volnovod-wr112": {
+    "gallery": [
+      "wr112-scaled.jpg",
+      "cpr112.jpg"
+    ],
+    "documents": []
+  },
+  "gibkiy-volnovod-wr75": {
+    "gallery": [
+      "wr75-scaled.jpg",
+      "wr75-1-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "kabelnye-sborki": {
+    "gallery": [
+      "n-lmr240uf-n-scaled.jpg",
+      "lmr240.jpg"
+    ],
+    "documents": []
+  },
+  "kommutator-mikrotik-crs310-1g-5s-4s-in-upravlyaemyy-8": {
+    "gallery": [
+      "bks-vkl-scaled.jpg",
+      "img_2587-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "kommutator-mikrotik-crs310-1g-5s-4s-in-upravlyaemyy-9": {
+    "gallery": [
+      "img_4594-2-scaled.jpg",
+      "img_4598-scaled.jpg",
+      "img_4617-2-scaled.jpg",
+      "img_4626-scaled.jpg",
+      "img_4587-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "bks0917-5h3.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/01/bks0917-5h3.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468342.002-blok-kommutatora-signalov-bks0917-5h3.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/01/nrsd.468342.002-blok-kommutatora-signalov-bks0917-5h3.pdf"
+      }
+    ]
+  },
+  "komplekt-zaschity-ot-atmosfernyh-vozdeystviy-dlya-razemov-i-antenn": {
+    "gallery": [
+      "germokompect2-scaled.jpg",
+      "germokomlect1-scaled.jpeg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "77c9bd0bd1e60866d6497722b050b784.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/03/77c9bd0bd1e60866d6497722b050b784.pdf"
+      },
+      {
+        "label": "Применение",
+        "filename": "andrew221213-1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/03/andrew221213-1.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr0915-7884": {
+    "gallery": [
+      "brg10-scaled.jpg",
+      "brg10-lev-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "konvertor-bpr0915-7884.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/konvertor-bpr0915-7884.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-bpr0915-7884.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/pasport-bpr0915-7884.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.464125.013-konvertor-bpr0915-7884.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/nrsd.464125.013-konvertor-bpr0915-7884.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr0917-1314-40": {
+    "gallery": [
+      "buc-40-1-scaled.jpg",
+      "buc-40-2-scaled.jpg",
+      "bpr0917-1314-40.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.464125.015-bpr0917-1314_40-2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/nrsd.464125.015-bpr0917-1314_40-2.pdf"
+      },
+      {
+        "label": "Протокол управления",
+        "filename": "njt8371_m_c_spec_rev1.2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/02/njt8371_m_c_spec_rev1.2.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr0917-1314og": {
+    "gallery": [
+      "bpr0917-1314g-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "blok-bpr0917-1314og.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/blok-bpr0917-1314og.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr0917-5765m": {
+    "gallery": [
+      "img_1973-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "konvertor-bpr0816-5765mp.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/konvertor-bpr0816-5765mp.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "bpr0816-5765mp.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/bpr0816-5765mp.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr2222-8485": {
+    "gallery": [
+      "bpr8485-2222-1-scaled.jpg",
+      "bpr8485-2222-2-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "konvertor-bpr8485-2222.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/konvertor-bpr8485-2222.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-bpr8485-2222.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/pasport-bpr8485-2222.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr7475-1112": {
+    "gallery": [
+      "brg10-scaled.jpg",
+      "brg10-lev-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "konvertor-bpr7475-1112.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/konvertor-bpr7475-1112.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-bpr7475-1112.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/pasport-bpr7475-1112.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.464125.014-konvertor-bpr7475-1112.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/11/nrsd.464125.014-konvertor-bpr7475-1112.pdf"
+      }
+    ]
+  },
+  "konvertor-bpr8485-2222": {
+    "gallery": [
+      "bpr2222-8485-1-scaled.jpg",
+      "bpr2222-8485-2-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "konvertor-bpr2222-8485.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/konvertor-bpr2222-8485.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-bpr2222-8485.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/pasport-bpr2222-8485.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "test.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/01/test.pdf"
+      }
+    ]
+  },
+  "nagruzka-bn-wr62g-1000": {
+    "gallery": [
+      "bn-wr62-1000-scaled.jpg",
+      "bn-wr62-1000-1-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "nagruzka-volnovodnaya-bn-wr75-0-5": {
+    "gallery": [
+      "wr75-1-scaled.jpg",
+      "wr75-2-scaled.jpg",
+      "wr75-3-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "nagruzka-volnovodnaya-bn-wr75-250": {
+    "gallery": [
+      "bn-wr75-250-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "pereklyuchatel-volnovodnyy-ast75w": {
+    "gallery": [
+      "astw75-1-scaled.jpg",
+      "ast75w-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "ast75.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/01/ast75.pdf"
+      },
+      {
+        "label": "Применение",
+        "filename": "ast75-electrical.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/01/ast75-electrical.pdf"
+      }
+    ]
+  },
+  "poluzhestkie-kabelnye-sborki": {
+    "gallery": [
+      "ez141-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "rezervirovannyy-usilitel-moschnosti-um2021-100r": {
+    "gallery": [
+      "um2021-100-1-scaled.jpg",
+      "um2021-100-in-scaled.jpg",
+      "s600-24-scaled.jpg",
+      "s600-24-1-scaled.jpg",
+      "k011-scaled.jpg",
+      "shema-um2021-100r.jpg"
+    ],
+    "documents": []
+  },
+  "splinter-rs0825-1nx4n": {
+    "gallery": [
+      "pc0825-1x4-1-scaled.jpg",
+      "img_4797-scaled.jpg",
+      "img_4804-scaled.jpg",
+      "img_4802-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "splinter-rs0825-1nx4n-2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/splinter-rs0825-1nx4n-2.pdf"
+      },
+      {
+        "label": "Этикетка",
+        "filename": "etiketka-rs0825-1nx4n.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/etiketka-rs0825-1nx4n.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468552.001-splitter-rs0825-1nx4n.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/nrsd.468552.001-splitter-rs0825-1nx4n.pdf"
+      }
+    ]
+  },
+  "splitter-rs0825-1nx2n": {
+    "gallery": [
+      "pc-1x2-1-scaled.jpg",
+      "pc1x2-2-scaled.jpg",
+      "pc1x2-3-scaled.jpg",
+      "pc1x2-4-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "splitter-rs0825-1nx2n.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/splitter-rs0825-1nx2n.pdf"
+      },
+      {
+        "label": "Этикетка",
+        "filename": "etiketka-rs0825-1nx2n.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/etiketka-rs0825-1nx2n.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468552.002-splitter-rs0825-1nx2n.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/nrsd.468552.002-splitter-rs0825-1nx2n.pdf"
+      }
+    ]
+  },
+  "splitter-rs0825-1sx2s": {
+    "gallery": [
+      "img_4959-scaled.jpg",
+      "img_4960-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "splitter-rs0825-1sx2s.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/splitter-rs0825-1sx2s.pdf"
+      },
+      {
+        "label": "Этикетка",
+        "filename": "etiketka-rs0825-1sx2s.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/etiketka-rs0825-1sx2s.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468552.004-splitter-rs0825-1sx2s-1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/nrsd.468552.004-splitter-rs0825-1sx2s-1.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um0101-10": {
+    "gallery": [
+      "img_2961-scaled.jpg",
+      "img_2963-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "ku0921-30x4-2.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/ku0921-30x4-2.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-ku0921-30-4-red1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/pasport-ku0921-30-4-red1.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um0404-70": {
+    "gallery": [
+      "um1822-12-1-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "um2121-12s.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/um2121-12s.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468714.025-usilitel-moschnosti-um1822-12.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/nrsd.468714.025-usilitel-moschnosti-um1822-12.pdf"
+      },
+      {
+        "label": "Протокол RS485",
+        "filename": "opisanie_2_0.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/opisanie_2_0.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um1822-12": {
+    "gallery": [
+      "um1822-12-1-scaled.jpg",
+      "um1822-12-2-scaled.jpg",
+      "um1822-12-3-scaled.jpg",
+      "um1822-12-4-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "um1822-12.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/um1822-12.pdf"
+      },
+      {
+        "label": "Габаритный чертеж",
+        "filename": "nrsd.468714.025-usilitel-moschnosti-um1822-12.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/nrsd.468714.025-usilitel-moschnosti-um1822-12.pdf"
+      },
+      {
+        "label": "Паспорт",
+        "filename": "pasport-um1822-12.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/pasport-um1822-12.pdf"
+      },
+      {
+        "label": "Протокол обмена RS485",
+        "filename": "protokol-rs485-um1822-12.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/protokol-rs485-um1822-12.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um2021-100": {
+    "gallery": [
+      "um2021-100-out-scaled.jpg",
+      "um2021-100-in-scaled.jpg",
+      "um2021-100-1-scaled.jpg",
+      "s600-24-scaled.jpg",
+      "s600-24-1-scaled.jpg",
+      "k011-scaled.jpg",
+      "um2021-100-input-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Паспорт",
+        "filename": "pasport-um2021-100-1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/pasport-um2021-100-1.pdf"
+      },
+      {
+        "label": "Габаритный чертеж УМ2021-100",
+        "filename": "nrsd.468714.030-usilitel-moschnosti-um2021-100.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/nrsd.468714.030-usilitel-moschnosti-um2021-100.pdf"
+      },
+      {
+        "label": "Габаритный чертеж С600-24",
+        "filename": "s600-24-red1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/s600-24-red1.pdf"
+      },
+      {
+        "label": "Протокол обмена RS485",
+        "filename": "opisanie-rs485-um2021-100-1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/opisanie-rs485-um2021-100-1.pdf"
+      },
+      {
+        "label": "Протокол испытаний",
+        "filename": "protokol-um2021-100-sayt.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/03/protokol-um2021-100-sayt.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um2424-60": {
+    "gallery": [
+      "um2424-60m-3-scaled.jpg",
+      "um2424-60m-4-scaled.jpg",
+      "um2424-60m-2-scaled.jpg",
+      "um2424-60m-1-scaled.jpg",
+      "montazh-um2424-60.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Паспорт",
+        "filename": "pasport-um2424-60.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/10/pasport-um2424-60.pdf"
+      },
+      {
+        "label": "Габаритный чертеж. Вер.1",
+        "filename": "nrsd.468714.031-gch-usilitel-moschnosti-um2424-60.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/10/nrsd.468714.031-gch-usilitel-moschnosti-um2424-60.pdf"
+      },
+      {
+        "label": "Протокол управления RS485",
+        "filename": "protokol-upravleniya-um2424-60.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/10/protokol-upravleniya-um2424-60.pdf"
+      },
+      {
+        "label": "Габаритный чертеж. Вер.2",
+        "filename": "nrsd.468714.031-usilitel-moschnosti-um2424-60-i1-gch.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/10/nrsd.468714.031-usilitel-moschnosti-um2424-60-i1-gch.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um5860-2": {
+    "gallery": [
+      "um5860-2-scaled.jpg",
+      "um5860-2-1-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Габаритный чертеж",
+        "filename": "gch-um5860-2-1.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/10/gch-um5860-2-1.pdf"
+      }
+    ]
+  },
+  "usilitel-moschnosti-um5964-15-4": {
+    "gallery": [
+      "um5765-15-scaled.jpg",
+      "um5964-15-4-scaled.jpg",
+      "s10-120m-1-scaled.jpg",
+      "s10-120m-scaled.jpg",
+      "k011-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Габаритный чертеж",
+        "filename": "5964_15.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/01/5964_15.pdf"
+      }
+    ]
+  },
+  "volnovodnaya-vstavka": {
+    "gallery": [
+      "wr62-2-scaled.jpg",
+      "wr62-1-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "volnovodnaya-vstavka-wr75": {
+    "gallery": [
+      "wr75-ugolok-scaled.jpg",
+      "wr75-1-ugolok-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "volnovodnye-pereklyuchateli": {
+    "gallery": [
+      "pv-1-scaled.jpg",
+      "pv-2-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Габаритный чертеж CPR229",
+        "filename": "cpr229.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/cpr229.pdf"
+      },
+      {
+        "label": "Габаритный чертеж CPR137",
+        "filename": "cpr137.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/cpr137.pdf"
+      },
+      {
+        "label": "Габаритный чертеж WR75",
+        "filename": "wr75.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2023/05/wr75.pdf"
+      }
+    ]
+  },
+  "volnovodnyy-adapter-wr75g-wr62g": {
+    "gallery": [
+      "wr75-wr62-scaled.jpg",
+      "wr62-wr75-scaled.jpg"
+    ],
+    "documents": []
+  },
+  "volnovodnyy-pereklyuchatel-mm137": {
+    "gallery": [
+      "mm137-1-scaled.jpg",
+      "mm137-scaled.jpg"
+    ],
+    "documents": [
+      {
+        "label": "Полное описание",
+        "filename": "veb-stranitsa-5.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/01/veb-stranitsa-5.pdf"
+      },
+      {
+        "label": "Модель",
+        "filename": "model-mm-mw-01.pdf",
+        "remoteUrl": "https://mw-lab.ru/wp-content/uploads/2024/01/model-mm-mw-01.pdf"
+      }
+    ]
+  }
+}
