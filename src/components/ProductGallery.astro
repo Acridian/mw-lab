@@ -10,16 +10,12 @@ interface Props {
 const { images, title } = Astro.props;
 ---
 
-{
-  images.length <= 1 && (
+<div>
+  {images.length <= 1 ? (
     <div class="product-visual">
       <Image src={images[0]} alt={title} widths={[480, 720, 1000]} sizes="(max-width: 980px) 100vw, 44vw" />
     </div>
-  )
-}
-
-{
-  images.length > 1 && (
+  ) : (
     <div class="product-gallery" data-gallery>
       <div class="product-gallery-main">
         <div class="product-gallery-slides" data-gallery-slides>
@@ -34,23 +30,11 @@ const { images, title } = Astro.props;
             </div>
           ))}
         </div>
-        <button
-          class="product-gallery-nav product-gallery-prev"
-          data-gallery-prev
-          aria-label="Предыдущее изображение"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
+        <button class="product-gallery-nav product-gallery-prev" data-gallery-prev aria-label="Предыдущее изображение">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <button
-          class="product-gallery-nav product-gallery-next"
-          data-gallery-next
-          aria-label="Следующее изображение"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+        <button class="product-gallery-nav product-gallery-next" data-gallery-next aria-label="Следующее изображение">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
       </div>
       <div class="product-gallery-thumbs" data-gallery-thumbs>
@@ -61,8 +45,8 @@ const { images, title } = Astro.props;
         ))}
       </div>
     </div>
-  )
-}
+  )}
+</div>
 
 <script>
   function initGallery(root: HTMLElement) {
@@ -91,14 +75,8 @@ const { images, title } = Astro.props;
     thumbs.forEach((t, i) => t.addEventListener('click', () => show(i)));
 
     root.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        show(current - 1);
-      }
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        show(current + 1);
-      }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); }
     });
 
     show(0);
