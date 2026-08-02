@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SITE_URL, COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_ADDRESS } from '../../data/company';
+import { SITE_URL, COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, COMPANY_ADDRESS, YANDEX_MAPS_CONSTRUCTOR } from '../../data/company';
 const base = import.meta.env.BASE_URL;
 const siteUrl = SITE_URL;
 
@@ -48,13 +48,13 @@ const localBusinessSchema = {
       <div>
         <dl class="contact-list">
           <div class="contact-item">
-            <dt>Телефон</dt><dd><a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a></dd>
+            <dt>Телефон</dt><dd><a href={`tel:${COMPANY_PHONE.replace(/\D/g, '')}`}>{COMPANY_PHONE_DISPLAY}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Почта</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd>
+            <dt>Почта</dt><dd><a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Адрес</dt><dd>{company.address.postalCode}, {company.address.locality}, {company.address.street}</dd>
+            <dt>Адрес</dt><dd>{COMPANY_ADDRESS.postalCode}, {COMPANY_ADDRESS.locality}, {COMPANY_ADDRESS.street}</dd>
           </div>
         </dl>
         <div style="margin-top: 28px">
@@ -75,7 +75,7 @@ const localBusinessSchema = {
             type="text/javascript"
             charset="utf-8"
             async
-            src={company.yandexMapsConstructor}
+            src={YANDEX_MAPS_CONSTRUCTOR}
             is:inline></script>
         </div>
       </div>
