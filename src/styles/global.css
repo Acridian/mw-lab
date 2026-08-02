@@ -16,7 +16,8 @@
   --cyan: #63c2e6;
   --cyan-strong: #92dcf2;
   --violet: #7d84f5;
-  --tray: #ffffff;
+  --tray: #d9e6ea;
+  --tray-center: #e8f0f2;
   --tray-ink: #10232d;
   --font-display: 'Geologica Variable', 'Arial', sans-serif;
   --font-body: 'Onest Variable', 'Arial', sans-serif;
@@ -344,9 +345,11 @@ textarea {
   align-self: center;
   place-items: center;
   min-height: 190px;
+  overflow: hidden;
   border: 1px solid rgba(216, 232, 236, 0.14);
   border-radius: 10px;
-  background: var(--tray);
+  background: radial-gradient(ellipse at center, var(--tray-center), var(--tray) 74%);
+  isolation: isolate;
 }
 
 .category-card-media img {
@@ -553,8 +556,16 @@ textarea {
   place-items: center;
   min-height: 255px;
   padding: 18px;
+  overflow: hidden;
   border-bottom: 1px solid var(--line);
-  background: var(--tray);
+  background: radial-gradient(ellipse at center, var(--tray-center), var(--tray) 74%);
+  isolation: isolate;
+}
+
+.category-card-media img,
+.product-card-image img,
+.product-visual img {
+  mix-blend-mode: multiply;
 }
 
 .product-card img {
@@ -617,18 +628,28 @@ textarea {
 .product-visual {
   position: sticky;
   top: 106px;
+  display: grid;
+  place-items: center;
+  height: min(560px, 46vw);
+  padding: 28px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
-  background: var(--chamber);
+  background: radial-gradient(ellipse at center, var(--tray-center), var(--tray) 74%);
+  isolation: isolate;
 }
 
 .product-visual img {
-  width: 100%;
-  height: min(560px, 46vw);
-  padding: 28px;
-  background: var(--tray);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
   object-fit: contain;
+}
+
+.product-visual .product-image-edge-fade {
+  -webkit-mask-image: linear-gradient(to right, #000 0 92%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0 92%, transparent 100%);
 }
 
 .product-copy h1 {
@@ -1089,7 +1110,7 @@ textarea {
     position: static;
   }
 
-  .product-visual img {
+  .product-visual {
     height: 480px;
   }
 
@@ -1200,7 +1221,7 @@ textarea {
     min-height: 420px;
   }
 
-  .product-visual img {
+  .product-visual {
     height: 330px;
   }
 

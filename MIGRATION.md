@@ -42,7 +42,7 @@ The design uses an RF-instrument visual language rather than a general-purpose s
 - Geologica for display headings, Onest for body text, IBM Plex Mono for frequencies and utility labels.
 - Deep navy/teal surfaces, a cyan accent aligned with the legacy logo, and a restrained violet secondary.
 - A high-resolution transparent satellite-dish render, color-graded into the navy/cyan system instead of presenting a single catalog item as the company signature. Source and usage details are recorded in `ASSET-CREDITS.md`.
-- Original equipment photography in white "inspection trays" so the source-image backgrounds merge into a deliberate system.
+- Original equipment photography in pale instrument-blue "inspection trays," with source-image edges faded into the field instead of exposed as white rectangles.
 - Company metrics derived from catalog data (product count, category count, years since 2012) instead of hard-coded legacy counters.
 
 Responsive styles cover desktop, tablet, and mobile; keyboard focus and reduced-motion preferences are supported.

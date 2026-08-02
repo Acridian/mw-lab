@@ -29,6 +29,9 @@ const ogImage = await getImage({
   <div class="shell product-detail">
     <div class="product-visual">
       <Image
+        class:list={{
+          'product-image-edge-fade': product.entry.id === 'blok-rezervirovannogo-generatora-brg10h8',
+        }}
         src={product.image}
         alt={product.entry.data.title}
         widths={[480, 720, 1000]}
