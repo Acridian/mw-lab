@@ -4,6 +4,12 @@ on:
   push:
     branches: [main, master]
   workflow_dispatch:
+    inputs:
+      base:
+        description: 'Base path (leave empty for root /)'
+        required: false
+        default: ''
+        type: string
 
 permissions:
   contents: read
@@ -26,7 +32,7 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          ASTRO_BASE: /mw-lab/
+          ASTRO_BASE: ${{ inputs.base || '' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
