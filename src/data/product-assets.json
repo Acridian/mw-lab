@@ -79,7 +79,7 @@
     "documents": [
       {
         "label": "Полное описание",
-        "filename": "novyy-dokument.pdf"
+        "filename": "brg10h8-full-description.pdf"
       },
       {
         "label": "Протокол обмена RS485",
@@ -316,7 +316,7 @@
       },
       {
         "label": "Габаритный чертеж",
-        "filename": "test.pdf"
+        "filename": "bpr2222-8485-dimensions.pdf"
       }
     ]
   },
@@ -635,7 +635,7 @@
     "documents": [
       {
         "label": "Полное описание",
-        "filename": "veb-stranitsa-5.pdf"
+        "filename": "mm137-full-description.pdf"
       },
       {
         "label": "Модель",

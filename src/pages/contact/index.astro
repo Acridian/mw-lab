@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import company from '../../data/company.json';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория микроволн» в Москве">
+<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория Микроволн» в Москве">
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
@@ -18,13 +19,13 @@ const base = import.meta.env.BASE_URL;
       <div>
         <dl class="contact-list">
           <div class="contact-item">
-            <dt>Телефон</dt><dd><a href="tel:+79175012121">+7 (917) 501-2121</a></dd>
+            <dt>Телефон</dt><dd><a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Почта</dt><dd><a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a></dd>
+            <dt>Почта</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Адрес</dt><dd>124460, Москва, Зеленоград, проезд 4801, д.7, стр.5</dd>
+            <dt>Адрес</dt><dd>{company.address.postalCode}, {company.address.locality}, {company.address.street}</dd>
           </div>
         </dl>
         <div style="margin-top: 28px">
@@ -45,7 +46,7 @@ const base = import.meta.env.BASE_URL;
             type="text/javascript"
             charset="utf-8"
             async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acc115f1f87ad892cb54ffe3100ee510d6bd76212876d3c7895c13aa0f49bbd49&width=100%25&height=400&lang=ru_RU&scroll=true"
+            src={company.yandexMapsConstructor}
             is:inline></script>
         </div>
       </div>

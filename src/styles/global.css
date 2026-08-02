@@ -650,11 +650,6 @@ textarea {
   object-fit: contain;
 }
 
-.product-visual .product-image-edge-fade {
-  -webkit-mask-image: linear-gradient(to right, #000 0 92%, transparent 100%);
-  mask-image: linear-gradient(to right, #000 0 92%, transparent 100%);
-}
-
 .product-gallery {
   display: grid;
   gap: 10px;

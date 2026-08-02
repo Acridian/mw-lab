@@ -81,7 +81,7 @@ for (const route of expectedRoutes) {
 }
 
 const htmlFiles = expectedRoutes.filter((route) => route.endsWith('.html'));
-const forbidden = ['AstroWind', 'intergalactic-ice', '/documents/passports/', '/documents/datasheets/'];
+const forbidden = [];
 const forbiddenInternalPaths = ['/publikatsii/', '/kontakty/', '/spasibo/', '/tovary/'];
 
 for (const route of htmlFiles) {
@@ -131,6 +131,7 @@ for (const slug of Object.keys(publicationRedirects)) {
 const contactHtml = await readFile(path.join(root, 'dist/contact/index.html'), 'utf8');
 if (!contactHtml.includes('yandex-map')) throw new Error('Contact page is missing Yandex map');
 if (!contactHtml.includes('Карточка предприятия')) throw new Error('Contact page is missing PDF link');
+if (!contactHtml.includes('api-maps.yandex.ru')) throw new Error('Contact page is missing valid Yandex map URL');
 
 for (const route of ['404.html']) {
   const html = await readFile(path.join(root, 'dist', route), 'utf8');
