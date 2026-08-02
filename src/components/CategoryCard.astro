@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import { getProductImage, type ProductCategory } from '../lib/catalog';
 
+const base = import.meta.env.BASE_URL;
+
 interface Props {
   category: ProductCategory;
   index: number;
@@ -15,7 +17,7 @@ const productCount =
   count === 1 ? '1 продукт' : count >= 2 && count <= 4 ? `${count} продукта` : `${count} продуктов`;
 ---
 
-<a class="category-card" href={`/products/${category.slug}/`}>
+<a class="category-card" href={`${base}products/${category.slug}/`}>
   <span class="category-card-count">{productCount}</span>
   <div class="category-card-media">
     <Image

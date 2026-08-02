@@ -1,25 +1,26 @@
 ---
 import { categories } from '../lib/catalog';
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="site-footer">
   <div class="shell">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" aria-label="На главную">
-          <img src="/assets/logo.png" width="320" height="75" alt="Лаборатория микроволн" />
+        <a href={base} aria-label="На главную">
+          <img src={`${base}assets/logo.png`} width="320" height="75" alt="Лаборатория микроволн" />
         </a>
         <p>Более 10 лет разрабатываем и поставляем профессиональное оборудование спутниковой связи</p>
       </div>
       <div class="footer-column">
         <h2>Продукция</h2>
-        {categories.map((category) => <a href={`/products/${category.slug}/`}>{category.title}</a>)}
+        {categories.map((category) => <a href={`${base}products/${category.slug}/`}>{category.title}</a>)}
       </div>
       <div class="footer-column">
         <h2>Компания</h2>
-        <a href="/publications/">Публикации</a>
-        <a href="/contact/">Контакты</a>
-        <a href="/privacy-policy/">Политика конфиденциальности</a>
+        <a href={`${base}publications/`}>Публикации</a>
+        <a href={`${base}contact/`}>Контакты</a>
+        <a href={`${base}privacy-policy/`}>Политика конфиденциальности</a>
         <a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a>
         <a href="tel:+79175012121">+7 (917) 501-2121</a>
       </div>

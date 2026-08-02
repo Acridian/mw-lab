@@ -1,3 +1,6 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <section class="cta">
   <div class="shell cta-inner">
     <div>
@@ -5,6 +8,6 @@
       <h2>Опишите задачу — подберём конфигурацию оборудования</h2>
       <p>Поможем с выбором изделия под ваши частоты, мощность и условия эксплуатации.</p>
     </div>
-    <a class="button" href="/contact/">Обсудить задачу</a>
+    <a class="button" href={`${base}contact/`}>Обсудить задачу</a>
   </div>
 </section>

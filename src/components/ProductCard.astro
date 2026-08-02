@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import type { ProductRecord } from '../lib/catalog';
 
+const base = import.meta.env.BASE_URL;
+
 interface Props {
   product: ProductRecord;
 }
@@ -9,7 +11,7 @@ interface Props {
 const { product } = Astro.props;
 ---
 
-<a class="product-card" href={`/catalog/${product.slug}/`}>
+<a class="product-card" href={`${base}catalog/${product.slug}/`}>
   <div class="product-card-image">
     <Image
       src={product.image}

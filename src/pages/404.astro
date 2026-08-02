@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Страница не найдена" description="Запрошенная страница не найдена" noindex>
@@ -8,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <strong>404</strong>
       <h1>Страница не найдена</h1>
       <p>Проверьте адрес или перейдите в каталог продукции.</p>
-      <a class="button" href="/catalog/">Перейти в каталог</a>
+      <a class="button" href={`${base}catalog/`}>Перейти в каталог</a>
     </div>
   </section>
 </BaseLayout>

@@ -5,6 +5,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductGallery from '../../components/ProductGallery.astro';
 import { getProducts, type ProductRecord } from '../../lib/catalog';
 
+const base = import.meta.env.BASE_URL;
+
 export async function getStaticPaths() {
   const products = await getProducts();
   return products.map((product) => ({ params: { product: product.slug }, props: { product } }));
@@ -35,9 +37,9 @@ const ogImage = await getImage({
     </div>
     <article class="product-copy">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="/">Главная</a><span aria-hidden="true">/</span><a href="/catalog/">Продукция</a><span
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a><span
           aria-hidden="true">/</span
-        ><a href={`/products/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
+        ><a href={`${base}products/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
           >/</span
         ><span aria-current="page">{product.entry.data.title}</span>
       </nav>
@@ -51,7 +53,7 @@ const ogImage = await getImage({
             {product.documents.map((doc) => (
               <li>
                 <a
-                  href={`/downloads/products/${doc.filename}`}
+                  href={`${base}downloads/products/${doc.filename}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="product-doc-link"
@@ -69,7 +71,7 @@ const ogImage = await getImage({
           <strong>Заинтересовало изделие или остались вопросы?</strong><br />Актуальные сроки и наличие
           уточняйте при запросе — ответим с предложением.
         </p>
-        <a class="button" href="/contact/">Отправить заявку</a>
+        <a class="button" href={`${base}contact/`}>Отправить заявку</a>
       </div>
     </article>
   </div>

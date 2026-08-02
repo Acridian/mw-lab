@@ -4,6 +4,8 @@ import CategoryCard from '../../components/CategoryCard.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { categories } from '../../lib/catalog';
 
+const base = import.meta.env.BASE_URL;
+
 const plural = (n: number, one: string, few: string, many: string) => {
   const m10 = n % 10,
     m100 = n % 100;
@@ -22,7 +24,7 @@ const productCount = categories.reduce((sum, category) => sum + category.product
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Продукция</span>
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><span aria-current="page">Продукция</span>
       </nav>
       <p class="eyebrow">
         {productCount}

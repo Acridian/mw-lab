@@ -2,6 +2,8 @@
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const page = await getEntry('pages', 'privacy-policy');
 if (!page) throw new Error('Privacy policy content is missing');
 const { Content } = await render(page);
@@ -11,7 +13,7 @@ const { Content } = await render(page);
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page"
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><span aria-current="page"
           >Политика конфиденциальности</span
         >
       </nav>
