@@ -7,7 +7,7 @@ import company from '../../data/company.json';
 import { getProducts, type ProductRecord } from '../../lib/catalog';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 export async function getStaticPaths() {
   const products = await getProducts();
@@ -38,7 +38,7 @@ const productSchema = {
   image: new URL(ogImage.src, siteUrl).href,
   brand: {
     '@type': 'Brand',
-    name: COMPANY_NAME,
+    name: company.name,
   },
 };
 

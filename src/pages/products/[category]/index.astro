@@ -12,7 +12,7 @@ import {
 import { plural } from '../../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 export async function getStaticPaths() {
   return Promise.all(

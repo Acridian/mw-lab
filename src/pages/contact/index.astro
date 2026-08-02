@@ -16,17 +16,17 @@ const breadcrumbSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: COMPANY_NAME,
-  url: SITE_URL,
-  logo: new URL('/assets/logo.png', SITE_URL).href,
-  email: COMPANY_EMAIL,
-  telephone: COMPANY_PHONE,
+  name: company.name,
+  url: company.siteUrl,
+  logo: new URL('/assets/logo.png', company.siteUrl).href,
+  email: company.email,
+  telephone: company.phone,
   address: {
     '@type': 'PostalAddress',
-    postalCode: COMPANY_ADDRESS.postalCode,
-    addressLocality: COMPANY_ADDRESS.locality,
-    streetAddress: COMPANY_ADDRESS.street,
-    addressCountry: COMPANY_ADDRESS.country,
+    postalCode: company.address.postalCode,
+    addressLocality: company.address.locality,
+    streetAddress: company.address.street,
+    addressCountry: company.address.country,
   },
 };
 ---
@@ -48,13 +48,13 @@ const localBusinessSchema = {
       <div>
         <dl class="contact-list">
           <div class="contact-item">
-            <dt>Телефон</dt><dd><a href={`tel:${COMPANY_PHONE.replace(/\D/g, '')}`}>{COMPANY_PHONE_DISPLAY}</a></dd>
+            <dt>Телефон</dt><dd><a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Почта</dt><dd><a href={`mailto:${COMPANY_EMAIL}`}>{COMPANY_EMAIL}</a></dd>
+            <dt>Почта</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Адрес</dt><dd>{COMPANY_ADDRESS.postalCode}, {COMPANY_ADDRESS.locality}, {COMPANY_ADDRESS.street}</dd>
+            <dt>Адрес</dt><dd>{company.address.postalCode}, {company.address.locality}, {company.address.street}</dd>
           </div>
         </dl>
         <div style="margin-top: 28px">
@@ -75,7 +75,7 @@ const localBusinessSchema = {
             type="text/javascript"
             charset="utf-8"
             async
-            src={YANDEX_MAPS_CONSTRUCTOR}
+            src={company.yandexMapsConstructor}
             is:inline></script>
         </div>
       </div>
