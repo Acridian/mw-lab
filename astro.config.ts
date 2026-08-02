@@ -11,7 +11,12 @@ export default defineConfig({
     sitemap({
       serialize(item) {
         if (item.url === 'https://mw-lab.ru/') {
-          return { ...item, changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() } as typeof item;
+          return {
+            ...item,
+            changefreq: 'daily',
+            priority: 1.0,
+            lastmod: new Date().toISOString(),
+          } as typeof item;
         }
         if (item.url.startsWith('https://mw-lab.ru/catalog/') && item.url !== 'https://mw-lab.ru/catalog/') {
           return { ...item, changefreq: 'weekly', priority: 0.8 } as typeof item;

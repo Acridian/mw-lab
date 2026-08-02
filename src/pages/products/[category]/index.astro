@@ -46,9 +46,8 @@ const breadcrumbSchema = {
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a><span
-          aria-hidden="true">/</span
-        ><span aria-current="page">{category.title}</span>
+        <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a
+        ><span aria-hidden="true">/</span><span aria-current="page">{category.title}</span>
       </nav>
       <p class="eyebrow">
         Каталог · {products.length}
