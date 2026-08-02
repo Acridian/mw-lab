@@ -6,10 +6,7 @@ const srcDir = path.join(root, 'src');
 
 const IMG_TAG = /<img\s/gi;
 
-const ALLOWED = new Set([
-  'src/components/Header.astro',
-  'src/components/Footer.astro',
-]);
+const ALLOWED = new Set(['src/components/Header.astro', 'src/components/Footer.astro']);
 
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {

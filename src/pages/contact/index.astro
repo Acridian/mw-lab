@@ -48,13 +48,17 @@ const localBusinessSchema = {
       <div>
         <dl class="contact-list">
           <div class="contact-item">
-            <dt>Телефон</dt><dd><a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a></dd>
+            <dt>Телефон</dt><dd>
+              <a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a>
+            </dd>
           </div>
           <div class="contact-item">
             <dt>Почта</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Адрес</dt><dd>{company.address.postalCode}, {company.address.locality}, {company.address.street}</dd>
+            <dt>Адрес</dt><dd>
+              {company.address.postalCode}, {company.address.locality}, {company.address.street}
+            </dd>
           </div>
         </dl>
         <div style="margin-top: 28px">
@@ -71,12 +75,8 @@ const localBusinessSchema = {
       </div>
       <div class="contact-map">
         <div id="yandex-map" style="width:100%;height:400px">
-          <script
-            type="text/javascript"
-            charset="utf-8"
-            async
-            src={company.yandexMapsConstructor}
-            is:inline></script>
+          <script type="text/javascript" charset="utf-8" async src={company.yandexMapsConstructor} is:inline
+          ></script>
         </div>
       </div>
     </div>
