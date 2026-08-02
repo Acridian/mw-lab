@@ -140,16 +140,8 @@ for (const slug of Object.keys(publicationRedirects)) {
 }
 
 const contactHtml = await readFile(path.join(root, 'dist/contact/index.html'), 'utf8');
-for (const token of [
-  'name="contact"',
-  'method="POST"',
-  'action="/thank-you/"',
-  'data-netlify="true"',
-  'name="form-name" value="contact"',
-  'name="consent" type="checkbox" required',
-]) {
-  if (!contactHtml.includes(token)) throw new Error(`Contact form is missing: ${token}`);
-}
+if (!contactHtml.includes('yandex-map')) throw new Error('Contact page is missing Yandex map');
+if (!contactHtml.includes('Карточка предприятия')) throw new Error('Contact page is missing PDF link');
 
 for (const route of ['thank-you/index.html', '404.html']) {
   const html = await readFile(path.join(root, 'dist', route), 'utf8');

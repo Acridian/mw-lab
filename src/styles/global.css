@@ -1248,7 +1248,15 @@ textarea {
     gap: 0;
   }
 
-  .contact-form {
+.contact-map {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--chamber);
+  min-height: 400px;
+}
+
+.contact-form {
     padding: 26px 20px;
   }
 

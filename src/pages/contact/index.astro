@@ -2,13 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория микроволн» в Москве, Зеленоград">
+<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория микроволн» в Москве">
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Контакты</span>
       </nav>
-      <p class="eyebrow">Москва · Зеленоград</p>
+      <p class="eyebrow">Москва</p>
       <h1 class="page-title">Контакты</h1>
     </div>
   </header>
@@ -38,68 +38,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </a>
         </div>
       </div>
-      <form
-        id="contact-form"
-        class="contact-form"
-        name="contact"
-        method="POST"
-        action="/thank-you/"
-        data-netlify="true"
-        netlify-honeypot="company-site"
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Не заполняйте это поле: <input name="company-site" /></label></p>
-        <h2>Свяжитесь с нами</h2>
-        <p>
-          Свяжитесь с нами любым удобным способом или заполните форму на этой странице.<br />Мы поможем решить
-          вашу задачу.
-        </p>
-        <div class="field-grid">
-          <div class="field">
-            <label for="name">Ваше имя*</label><input
-              id="name"
-              name="name"
-              required
-              maxlength="100"
-              autocomplete="name"
-            />
-          </div>
-          <div class="field">
-            <label for="phone">Номер телефона*</label><input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              maxlength="50"
-              autocomplete="tel"
-            />
-          </div>
+       <div class="contact-map">
+        <div id="yandex-map" style="width:100%;height:400px">
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acc115f1f87ad892cb54ffe3100ee510d6bd76212876d3c7895c13aa0f49bbd49&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true" is:inline></script>
         </div>
-        <div class="field">
-          <label for="email">E-Mail</label><input
-            id="email"
-            name="email"
-            type="email"
-            maxlength="254"
-            autocomplete="email"
-          />
-        </div>
-        <div class="field">
-          <label for="message">Сообщение</label><textarea id="message" name="message" maxlength="2000"
-          ></textarea>
-        </div>
-        <label class="consent">
-          <input name="consent" type="checkbox" required />
-          <span>Я принимаю <a href="/privacy-policy/">политику конфиденциальности</a></span>
-        </label>
-        <button class="button" type="submit">Отправить заявку</button>
-      </form>
+      </div>
     </div>
   </section>
 </BaseLayout>
-
-<script>
-  const product = new URLSearchParams(window.location.search).get('product');
-  const message = document.querySelector<HTMLTextAreaElement>('#message');
-  if (product && message && !message.value) message.value = `Интересует изделие: ${product}`;
-</script>
