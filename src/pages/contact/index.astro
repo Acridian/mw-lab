@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { SITE_URL, COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, COMPANY_ADDRESS, YANDEX_MAPS_CONSTRUCTOR } from '../../data/company';
+import company from '../../data/company.json';
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

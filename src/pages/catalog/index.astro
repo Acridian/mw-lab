@@ -3,11 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import CategoryCard from '../../components/CategoryCard.astro';
 import ContactCta from '../../components/ContactCta.astro';
 import { categories } from '../../lib/catalog';
-import { SITE_URL } from '../../data/company';
+import company from '../../data/company.json';
 import { plural } from '../../lib/i18n';
 
 const base = import.meta.env.BASE_URL;
-const siteUrl = SITE_URL;
+const siteUrl = company.siteUrl;
 
 const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
 
