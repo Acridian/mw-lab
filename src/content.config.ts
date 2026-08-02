@@ -8,6 +8,7 @@ const products = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     coverImage: z.string(),
+    description: z.string().optional(),
   }),
 });
 

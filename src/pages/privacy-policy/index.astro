@@ -1,15 +1,27 @@
 ---
 import { getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_URL } from '../../data/company';
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = SITE_URL;
 
 const page = await getEntry('pages', 'privacy-policy');
 if (!page) throw new Error('Privacy policy content is missing');
 const { Content } = await render(page);
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Политика конфиденциальности' },
+  ],
+};
 ---
 
 <BaseLayout title={page.data.title} description="Политика конфиденциальности сайта mw-lab.ru">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="page-hero">
     <div class="shell">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
