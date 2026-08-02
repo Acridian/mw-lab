@@ -255,6 +255,9 @@ textarea {
   overflow: hidden;
   padding: clamp(44px, 4.5vw, 64px) 0 clamp(36px, 4vw, 52px);
   border-bottom: 1px solid var(--line);
+  background-image: url('../assets/images/company/hero-dish-desktop.webp');
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-grid {
@@ -1252,6 +1255,8 @@ textarea {
 
   .hero {
     padding: 40px 0 34px;
+    background-image: url('../assets/images/company/hero-dish-mobile.webp');
+    background-position: center bottom;
   }
 
   #catalog {

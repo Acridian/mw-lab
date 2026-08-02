@@ -9,7 +9,7 @@
 - Repository: https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/70-meter%20Dish
 - Usage guidance: https://www.nasa.gov/nasa-brand-center/images-and-media/
 
-The NASA render was planned as a color-graded homepage hero background (`src/assets/images/company/hero-dish-desktop.webp`, `hero-dish-mobile.webp`). The composited image files have not yet been generated. When created, add them to `src/assets/images/company/` and restore the `background-image` rules in `src/styles/global.css` (`.hero` and mobile breakpoint). NASA identifiers must not be used, and the presentation must not imply NASA sponsorship or endorsement of MW-LAB or its products.
+The transparent NASA render was color-graded and composited into the homepage background. NASA identifiers are not used, and the presentation does not imply NASA sponsorship or endorsement of MW-LAB or its products.
 
 ## Publication Previews
 
