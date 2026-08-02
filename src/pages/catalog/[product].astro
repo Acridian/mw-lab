@@ -1,0 +1,63 @@
+---
+import { getImage, Image } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProducts, type ProductRecord } from '../../lib/catalog';
+
+export async function getStaticPaths() {
+  const products = await getProducts();
+  return products.map((product) => ({ params: { product: product.entry.id }, props: { product } }));
+}
+
+interface Props {
+  product: ProductRecord;
+}
+
+const { product } = Astro.props;
+const { Content } = await render(product.entry);
+const ogImage = await getImage({
+  src: product.image,
+  width: 1200,
+  height: 630,
+  fit: 'contain',
+  background: '#ffffff',
+  format: 'jpeg',
+});
+---
+
+<BaseLayout title={product.entry.data.title} description={product.excerpt} image={ogImage.src}>
+  <div class="shell product-detail">
+    <div class="product-visual">
+      <Image
+        src={product.image}
+        alt={product.entry.data.title}
+        widths={[480, 720, 1000]}
+        sizes="(max-width: 980px) 100vw, 44vw"
+      />
+    </div>
+    <article class="product-copy">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><a href="/catalog/">Продукция</a><span
+          aria-hidden="true">/</span
+        ><a href={`/tovary/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
+          >/</span
+        ><span aria-current="page">{product.entry.data.title}</span>
+      </nav>
+      <p class="eyebrow">{product.category.title}</p>
+      <h1>{product.entry.data.title}</h1>
+      <div class="rich-copy"><Content /></div>
+      <div class="product-inquiry">
+        <p>
+          <strong>Заинтересовало изделие или остались вопросы?</strong><br />Актуальные сроки и наличие
+          уточняйте при запросе — ответим с предложением.
+        </p>
+        <a
+          class="button"
+          href={`/kontakty/?product=${encodeURIComponent(product.entry.data.title)}#contact-form`}
+        >
+          Отправить заявку
+        </a>
+      </div>
+    </article>
+  </div>
+</BaseLayout>

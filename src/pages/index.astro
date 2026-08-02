@@ -1,0 +1,124 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import ContactCta from '../components/ContactCta.astro';
+import { categories } from '../lib/catalog';
+import aboutImage from '../assets/images/company/about-years.jpg';
+
+const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
+const foundedYear = 2012;
+const years = new Date().getFullYear() - foundedYear;
+const plural = (n: number, one: string, few: string, many: string) => {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
+};
+---
+
+<BaseLayout
+  title="Лаборатория микроволн — оборудование спутниковой связи"
+  description="Разработка и поставка СВЧ-оборудования для наземных станций спутниковой связи: генераторы, конверторы, усилители мощности, элементы антенно-волноводного тракта"
+>
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Разработка и производство · Зеленоград</p>
+        <h1 class="display-title">СВЧ-оборудование для наземных станций спутниковой связи</h1>
+        <p class="page-lead">
+          Генераторы, конверторы, усилители мощности и элементы антенно-волноводного тракта — от 400 МГц до 15
+          ГГц. Поддерживаем изделия на весь срок службы.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="/catalog/">Смотреть продукцию</a>
+          <a class="button button-secondary" href="/kontakty/">Задать вопрос инженеру</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Каталог решений</p>
+          <h2 class="section-title">Наша продукция</h2>
+        </div>
+        <p class="section-lead">
+          Генераторы и конверторы СВЧ-сигналов, усилители мощности, коммутаторы, системы резервирования и
+          элементы антенно-волноводного тракта.
+        </p>
+      </div>
+      <div class="category-grid">
+        {categories.map((category, index) => <CategoryCard {category} {index} headingLevel="h3" />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section evidence-section">
+    <div class="shell about-layout">
+      <div class="about-copy">
+        <p class="eyebrow">Опыт и специализация</p>
+        <h2>С 2012 года разрабатываем и поставляем оборудование спутниковой связи</h2>
+        <p>
+          Проектируем и изготавливаем изделия для преобразования и коммутации сигналов, усилители мощностью от
+          1 до 100 Вт, коаксиальные СВЧ-сборки собственного производства и элементы антенно-волноводного
+          тракта.
+        </p>
+        <p>Обеспечиваем техническую поддержку в течение всего срока службы изделий — 10 лет и более.</p>
+      </div>
+      <div class="about-image">
+        <Image
+          src={aboutImage}
+          alt="Антенны станции спутниковой связи"
+          widths={[520, 760, 1040]}
+          sizes="(max-width: 980px) 100vw, 42vw"
+        />
+      </div>
+    </div>
+    <div class="shell metrics" aria-label="Показатели компании">
+      <div class="metric">
+        <strong>{productCount}</strong><span
+          >{plural(productCount, 'изделие', 'изделия', 'изделий')} в каталоге</span
+        >
+      </div>
+      <div class="metric"><strong>{categories.length}</strong><span>направлений продукции</span></div>
+      <div class="metric">
+        <strong>{years}</strong><span>{plural(years, 'год', 'года', 'лет')} инженерной работы</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section industries-section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Области работы</p>
+          <h2 class="section-title">Отрасли применения</h2>
+        </div>
+        <p class="section-lead">
+          Оборудование работает там, где требуется устойчивая спутниковая связь и предсказуемые характеристики
+          тракта.
+        </p>
+      </div>
+      <div class="industries">
+        <article class="industry">
+          <h3>Аэрокосмическая промышленность</h3>
+          <p>Оборудование аэрокосмического применения</p>
+        </article>
+        <article class="industry">
+          <h3>Телекоммуникации</h3>
+          <p>Оборудование для стационарных и подвижных станций спутниковой связи</p>
+        </article>
+        <article class="industry">
+          <h3>Тестирование и испытания</h3>
+          <p>Измерительные и испытательные приборы для тестирования телекоммуникационного оборудования</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <ContactCta />
+</BaseLayout>

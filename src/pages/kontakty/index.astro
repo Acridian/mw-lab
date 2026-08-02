@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Контакты" description="Контакты ООО «Лаборатория микроволн» в Москве, Зеленоград">
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Контакты</span>
+      </nav>
+      <p class="eyebrow">Москва · Зеленоград</p>
+      <h1 class="page-title">Контакты</h1>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell contact-layout">
+      <div>
+        <dl class="contact-list">
+          <div class="contact-item">
+            <dt>Телефон</dt><dd><a href="tel:+79175012121">+7 (917) 501-2121</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Почта</dt><dd><a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Адрес</dt><dd>124460, Москва, Зеленоград, проезд 4801, д.7, стр.5</dd>
+          </div>
+        </dl>
+        <div style="margin-top: 28px">
+          <a
+            class="button button-secondary"
+            href="/downloads/kartochka-mwlab.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Карточка предприятия, PDF, откроется в новой вкладке"
+          >
+            Карточка предприятия (PDF)
+          </a>
+        </div>
+      </div>
+      <form
+        id="contact-form"
+        class="contact-form"
+        name="contact"
+        method="POST"
+        action="/spasibo/"
+        data-netlify="true"
+        netlify-honeypot="company-site"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden><label>Не заполняйте это поле: <input name="company-site" /></label></p>
+        <h2>Свяжитесь с нами</h2>
+        <p>
+          Свяжитесь с нами любым удобным способом или заполните форму на этой странице.<br />Мы поможем решить
+          вашу задачу.
+        </p>
+        <div class="field-grid">
+          <div class="field">
+            <label for="name">Ваше имя*</label><input id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="phone">Номер телефона*</label><input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">E-Mail</label><input id="email" name="email" type="email" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="message">Сообщение</label><textarea id="message" name="message" maxlength="2000"
+          ></textarea>
+        </div>
+        <label class="consent">
+          <input name="consent" type="checkbox" required />
+          <span>Я принимаю <a href="/privacy-policy/">политику конфиденциальности</a></span>
+        </label>
+        <button class="button" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const product = new URLSearchParams(window.location.search).get('product');
+  const message = document.querySelector<HTMLTextAreaElement>('#message');
+  if (product && message && !message.value) message.value = `Интересует изделие: ${product}`;
+</script>

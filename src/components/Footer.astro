@@ -1,0 +1,32 @@
+---
+import { categories } from '../lib/catalog';
+---
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="На главную">
+          <img src="/assets/logo.png" width="320" height="75" alt="Лаборатория микроволн" />
+        </a>
+        <p>Более 10 лет разрабатываем и поставляем профессиональное оборудование спутниковой связи</p>
+      </div>
+      <div class="footer-column">
+        <h2>Продукция</h2>
+        {categories.map((category) => <a href={`/tovary/${category.slug}/`}>{category.title}</a>)}
+      </div>
+      <div class="footer-column">
+        <h2>Компания</h2>
+        <a href="/publikatsii/">Публикации</a>
+        <a href="/kontakty/">Контакты</a>
+        <a href="/privacy-policy/">Политика конфиденциальности</a>
+        <a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a>
+        <a href="tel:+79175012121">+7 (917) 501-2121</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © {new Date().getFullYear()} Лаборатория Микроволн</span>
+      <span>400 МГц — 15 ГГц · 1 Вт — 100 Вт</span>
+    </div>
+  </div>
+</footer>

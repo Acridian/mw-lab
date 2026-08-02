@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCta from '../../components/ContactCta.astro';
+import { getPublications } from '../../lib/publications';
+
+const publications = await getPublications();
+const dateFormat = new Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout
+  title="Публикации"
+  description="Публикации Лаборатории микроволн об оборудовании и системах спутниковой связи"
+>
+  <header class="page-hero">
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="/">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Публикации</span>
+      </nav>
+      <p class="eyebrow">Материалы и отраслевые издания</p>
+      <h1 class="page-title">Публикации</h1>
+    </div>
+  </header>
+  <section class="section">
+    <div class="shell publication-grid">
+      {
+        publications.map((publication) => (
+          <a
+            class="publication-card"
+            href={publication.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={publication.image}
+              alt={publication.entry.data.title}
+              widths={[360, 600, 840]}
+              sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
+            />
+            <div class="publication-copy">
+              <time datetime={publication.entry.data.date.toISOString()}>
+                {dateFormat.format(publication.entry.data.date)}
+              </time>
+              <h2>{publication.entry.data.title}</h2>
+              <span>Открыть публикацию ↗</span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <ContactCta />
+</BaseLayout>
