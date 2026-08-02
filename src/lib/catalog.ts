@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
+import productRoutes from '../data/product-routes.json';
 
 export interface ProductCategory {
   slug: string;
@@ -11,6 +12,7 @@ export interface ProductCategory {
 
 export interface ProductRecord {
   entry: CollectionEntry<'products'>;
+  slug: string;
   category: ProductCategory;
   image: ImageMetadata;
   excerpt: string;
@@ -18,7 +20,7 @@ export interface ProductRecord {
 
 export const categories: ProductCategory[] = [
   {
-    slug: 'generatory',
+    slug: 'signal-generators',
     title: 'Генераторы сигналов',
     description: 'Генераторы ВЧ и СВЧ-сигналов',
     image: 'brg10-scaled.jpg',
@@ -31,7 +33,7 @@ export const categories: ProductCategory[] = [
     ],
   },
   {
-    slug: 'kommutatory-signalov',
+    slug: 'signal-switches',
     title: 'Коммутаторы сигналов',
     description: 'Коммутаторы сигналов L-диапазона',
     image: 'img_4587-scaled.jpg',
@@ -41,7 +43,7 @@ export const categories: ProductCategory[] = [
     ],
   },
   {
-    slug: 'preobrazovateli-chastot',
+    slug: 'frequency-converters',
     title: 'Преобразователи частоты',
     description: 'Конверторы СВЧ-сигналов диапазонов C , Х , Ku.',
     image: 'bpr0816-5765mp-prim-scaled.jpg',
@@ -55,7 +57,7 @@ export const categories: ProductCategory[] = [
     ],
   },
   {
-    slug: 'sistemy-rezervirovanya',
+    slug: 'redundancy-systems',
     title: 'Системы резервирования 1:1',
     description: 'Системы резервирования 1:1 и составные части',
     image: 'brip300-48-scaled.jpg',
@@ -72,7 +74,7 @@ export const categories: ProductCategory[] = [
     ],
   },
   {
-    slug: 'usiliteli-moschnosti',
+    slug: 'power-amplifiers',
     title: 'Усилители мощности',
     description:
       'Усилители мощности СВЧ-сигналов частотой от 400 МГц до 15 ГГц, выходной мощностью от единиц до сотен ватт',
@@ -90,7 +92,7 @@ export const categories: ProductCategory[] = [
     ],
   },
   {
-    slug: 'elementy-antenno-volnovodnogo-trakta',
+    slug: 'antenna-waveguide-components',
     title: 'Элементы антенно-волноводного тракта',
     description:
       'Волноводные вставки, коаксиальные сумматоры и делители, направленные ответвители, коаксиально-волноводные переходы, кабельные сборки',
@@ -141,10 +143,13 @@ export async function getProducts(): Promise<ProductRecord[]> {
   return entries.map((entry) => {
     const category = categories.find((item) => item.productSlugs.includes(entry.id));
     if (!category) throw new Error(`Product has no live category mapping: ${entry.id}`);
+    const slug = (productRoutes as Record<string, string>)[entry.id];
+    if (!slug) throw new Error(`Product has no English route: ${entry.id}`);
 
     const copy = plainText(entry.body ?? '');
     return {
       entry,
+      slug,
       category,
       image: getProductImage(entry.data.coverImage),
       excerpt: copy.length > 190 ? `${copy.slice(0, 187).trim()}...` : copy,

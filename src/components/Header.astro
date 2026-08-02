@@ -2,15 +2,15 @@
 const navigation = [
   { href: '/', label: 'Главная' },
   { href: '/catalog/', label: 'Продукция' },
-  { href: '/publikatsii/', label: 'Публикации' },
-  { href: '/kontakty/', label: 'Контакты' },
+  { href: '/publications/', label: 'Публикации' },
+  { href: '/contact/', label: 'Контакты' },
 ];
 
 const pathname = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/'
     ? pathname === '/'
-    : pathname.startsWith(href) || (href === '/catalog/' && pathname.startsWith('/tovary/'));
+    : pathname.startsWith(href) || (href === '/catalog/' && pathname.startsWith('/products/'));
 ---
 
 <header class="site-header">

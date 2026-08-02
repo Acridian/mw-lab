@@ -27,16 +27,18 @@ const dateFormat = new Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'l
         publications.map((publication) => (
           <a
             class="publication-card"
-            href={publication.externalUrl}
+            href={`/publications/${publication.slug}/`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={publication.image}
-              alt={publication.entry.data.title}
-              widths={[360, 600, 840]}
-              sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
-            />
+            <div class="publication-media">
+              <Image
+                src={publication.image}
+                alt={publication.entry.data.title}
+                widths={[360, 600, 840]}
+                sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
+              />
+            </div>
             <div class="publication-copy">
               <time datetime={publication.entry.data.date.toISOString()}>
                 {dateFormat.format(publication.entry.data.date)}

@@ -13,7 +13,7 @@ Migrated:
 - Current public phone, email, and contact address.
 - A site-specific privacy-policy draft describing the current form flow.
 - Current company-card PDF.
-- Existing canonical product, category, publication, contact, and legal paths.
+- English canonical paths with permanent redirects from the legacy WordPress URLs.
 
 Not inferred or fabricated:
 
@@ -23,17 +23,18 @@ Not inferred or fabricated:
 
 ## Architecture
 
-Astro generates static HTML for every public route. Imported WordPress Markdown is immutable source material; `src/lib/catalog.ts` supplies only taxonomy and ordering that were verified against the live site.
+Astro generates static HTML for every public route. Imported WordPress Markdown remains the product-content source; `src/lib/catalog.ts` supplies taxonomy and ordering, while `src/data/product-routes.json` defines the reviewed English product URLs.
 
-The route strategy is intentionally conservative:
+The public route strategy uses concise English URLs while preserving the WordPress addresses as permanent redirects:
 
 - `/catalog/` remains the catalog archive.
-- `/catalog/<legacy-slug>/` remains every product path.
-- `/tovary/<legacy-category>/` remains every category path.
-- `/publikatsii/`, `/kontakty/`, and `/privacy-policy/` remain unchanged.
-- Legacy publication detail URLs redirect directly to their real external Groteck readers instead of serving empty WordPress templates.
+- `/catalog/<english-product-slug>/` serves every product path.
+- `/products/<english-category>/` serves every category path.
+- `/publications/`, `/contact/`, and `/privacy-policy/` serve company pages.
+- English publication detail URLs redirect directly to their real external Groteck readers instead of serving empty templates.
+- Every replaced WordPress URL has a permanent Netlify redirect to its English replacement or verified external reader.
 
-This avoids a large redirect migration and protects existing search results and bookmarks.
+This protects existing search results and bookmarks while exposing only English canonical links in the new site.
 
 ## Design Direction
 
@@ -57,7 +58,7 @@ The draft is written in plain language but has not been reviewed by a lawyer. Ob
 
 ### 2. Form Delivery
 
-The current implementation uses Netlify Forms with required name, phone, and consent fields. It preserves the visible Contact Form 7 field set and sends users to `/spasibo/` after successful submission.
+The current implementation uses Netlify Forms with required name, phone, and consent fields. It preserves the visible Contact Form 7 field set and sends users to `/thank-you/` after successful submission.
 
 If hosting on Netlify:
 
@@ -88,7 +89,7 @@ The unverifiable legacy counters (`28`, `11`, `83`) were removed from the homepa
 ## Review And Cutover
 
 1. Run `npm run verify`.
-2. Run `npm run dev` and review `/`, `/catalog/`, one page from each category, `/publikatsii/`, `/kontakty/`, and `/privacy-policy/` at desktop and phone widths.
+2. Run `npm run dev` and review `/`, `/catalog/`, one page from each category, `/publications/`, `/contact/`, and `/privacy-policy/` at desktop and phone widths.
 3. Approve the legal policy and form transport.
 4. Test form delivery in the final hosting environment.
 5. Crawl the preview and compare all legacy sitemap URLs against the new deployment.

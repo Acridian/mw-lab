@@ -6,7 +6,7 @@ import { getProducts, type ProductRecord } from '../../lib/catalog';
 
 export async function getStaticPaths() {
   const products = await getProducts();
-  return products.map((product) => ({ params: { product: product.entry.id }, props: { product } }));
+  return products.map((product) => ({ params: { product: product.slug }, props: { product } }));
 }
 
 interface Props {
@@ -42,7 +42,7 @@ const ogImage = await getImage({
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href="/">Главная</a><span aria-hidden="true">/</span><a href="/catalog/">Продукция</a><span
           aria-hidden="true">/</span
-        ><a href={`/tovary/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
+        ><a href={`/products/${product.category.slug}/`}>{product.category.title}</a><span aria-hidden="true"
           >/</span
         ><span aria-current="page">{product.entry.data.title}</span>
       </nav>
@@ -56,7 +56,7 @@ const ogImage = await getImage({
         </p>
         <a
           class="button"
-          href={`/kontakty/?product=${encodeURIComponent(product.entry.data.title)}#contact-form`}
+          href={`/contact/?product=${encodeURIComponent(product.entry.data.title)}#contact-form`}
         >
           Отправить заявку
         </a>
