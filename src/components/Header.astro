@@ -21,8 +21,8 @@ const isCurrent = (href: string) => {
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href={base} aria-label="Лаборатория Микроволн, главная">
-      <img src={`${base}assets/logo.png`} width="320" height="75" alt="Лаборатория Микроволн" />
+    <a class="brand" href={base} aria-label={`${company.name}, главная`}>
+      <img src={`${base}assets/logo.png`} width="320" height="75" alt={company.name} />
     </a>
     <nav class="desktop-nav" aria-label="Основная навигация">
       {

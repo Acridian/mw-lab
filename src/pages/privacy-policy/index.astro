@@ -20,7 +20,10 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout title={page.data.title} description="Политика конфиденциальности сайта mw-lab.ru">
+<BaseLayout
+  title={page.data.title}
+  description={`Политика конфиденциальности сайта ${company.siteUrl.replace('https://', '')}`}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <header class="page-hero">
     <div class="shell">
