@@ -48,13 +48,13 @@ const localBusinessSchema = {
       <div>
         <dl class="contact-list">
           <div class="contact-item">
-            <dt>Телефон</dt><dd><a href="tel:+79175012121">+7 (917) 501-2121</a></dd>
+            <dt>Телефон</dt><dd><a href={`tel:${company.phone.replace(/\D/g, '')}`}>{company.phoneDisplay}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Почта</dt><dd><a href="mailto:info@mw-lab.ru">info@mw-lab.ru</a></dd>
+            <dt>Почта</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd>
           </div>
           <div class="contact-item">
-            <dt>Адрес</dt><dd>124460, Москва, Зеленоград, проезд 4801, д.7, стр.5</dd>
+            <dt>Адрес</dt><dd>{company.address.postalCode}, {company.address.locality}, {company.address.street}</dd>
           </div>
         </dl>
         <div style="margin-top: 28px">
@@ -75,7 +75,7 @@ const localBusinessSchema = {
             type="text/javascript"
             charset="utf-8"
             async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acc115f1f87ad892cb54ffe3100ee510d6bd76212876d3c7895c13aa0f49bbd49&width=100%25&height=400&lang=ru_RU&scroll=true"
+            src={company.yandexMapsConstructor}
             is:inline></script>
         </div>
       </div>
