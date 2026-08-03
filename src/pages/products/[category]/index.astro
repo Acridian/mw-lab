@@ -29,6 +29,7 @@ interface Props {
 }
 
 const { category, products } = Astro.props;
+const eyebrow = `Каталог · ${products.length} ${plural(products.length, 'изделие', 'изделия', 'изделий')}`;
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -49,10 +50,7 @@ const breadcrumbSchema = {
         <a href={base}>Главная</a><span aria-hidden="true">/</span><a href={`${base}catalog/`}>Продукция</a
         ><span aria-hidden="true">/</span><span aria-current="page">{category.title}</span>
       </nav>
-      <p class="eyebrow">
-        Каталог · {products.length}
-        {plural(products.length, 'изделие', 'изделия', 'изделий')}
-      </p>
+      <p class="eyebrow">{eyebrow}</p>
       <h1 class="page-title">{category.title}</h1>
       <p class="page-lead">{category.description}</p>
     </div>
