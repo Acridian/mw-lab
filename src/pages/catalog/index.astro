@@ -10,6 +10,7 @@ const base = import.meta.env.BASE_URL;
 const siteUrl = company.siteUrl;
 
 const productCount = categories.reduce((sum, category) => sum + category.productSlugs.length, 0);
+const eyebrow = `${productCount} ${plural(productCount, 'изделие', 'изделия', 'изделий')} · ${categories.length} ${plural(categories.length, 'направление', 'направления', 'направлений')}`;
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -31,11 +32,7 @@ const breadcrumbSchema = {
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a href={base}>Главная</a><span aria-hidden="true">/</span><span aria-current="page">Продукция</span>
       </nav>
-      <p class="eyebrow">
-        {productCount}
-        {plural(productCount, 'изделие', 'изделия', 'изделий')} · {categories.length}
-        {plural(categories.length, 'направление', 'направления', 'направлений')}
-      </p>
+      <p class="eyebrow">{eyebrow}</p>
       <h1 class="page-title">Наша продукция</h1>
       <p class="page-lead">
         Генераторы и конверторы СВЧ-сигналов, усилители мощности, коммутаторы, системы резервирования и
