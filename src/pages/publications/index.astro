@@ -52,6 +52,9 @@ const breadcrumbSchema = {
                 widths={[360, 600, 840]}
                 sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
               />
+              <div class="publication-cover-overlay">
+                <span class="publication-cover-title">{publication.entry.data.title}</span>
+              </div>
             </div>
             <div class="publication-copy">
               <time datetime={publication.entry.data.date.toISOString()}>
