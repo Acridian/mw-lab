@@ -28,6 +28,24 @@ export interface ProductRecord {
 
 export const categories: ProductCategory[] = [
   {
+    slug: 'power-amplifiers',
+    title: 'Усилители мощности',
+    description:
+      'Усилители мощности СВЧ-сигналов частотой от 400 МГц до 15 ГГц, выходной мощностью от единиц до сотен ватт',
+    image: 'um2021-100-input-scaled.jpg',
+    productSlugs: [
+      'usilitel-moschnosti-um1822-12',
+      'usilitel-moschnosti-um0404-70',
+      'usilitel-moschnosti-um0101-10',
+      'usilitel-moschnosti-um2021-100',
+      'usilitel-moschnosti-um5964-15-4',
+      'usilitel-moschnosti-um5860-2',
+      'rezervirovannyy-usilitel-moschnosti-um2021-100r',
+      'konvertor-bpr0917-1314-40',
+      'usilitel-moschnosti-um2424-60',
+    ],
+  },
+  {
     slug: 'signal-generators',
     title: 'Генераторы сигналов',
     description:
@@ -83,24 +101,6 @@ export const categories: ProductCategory[] = [
       'pereklyuchatel-volnovodnyy-ast75w',
       'volnovodnyy-pereklyuchatel-mm137',
       'blok-nagruzki-bnwr75-250',
-    ],
-  },
-  {
-    slug: 'power-amplifiers',
-    title: 'Усилители мощности',
-    description:
-      'Усилители мощности СВЧ-сигналов частотой от 400 МГц до 15 ГГц, выходной мощностью от единиц до сотен ватт',
-    image: 'um2021-100-input-scaled.jpg',
-    productSlugs: [
-      'usilitel-moschnosti-um1822-12',
-      'usilitel-moschnosti-um0404-70',
-      'usilitel-moschnosti-um0101-10',
-      'usilitel-moschnosti-um2021-100',
-      'usilitel-moschnosti-um5964-15-4',
-      'usilitel-moschnosti-um5860-2',
-      'rezervirovannyy-usilitel-moschnosti-um2021-100r',
-      'konvertor-bpr0917-1314-40',
-      'usilitel-moschnosti-um2424-60',
     ],
   },
   {
