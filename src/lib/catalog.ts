@@ -57,7 +57,7 @@ export const categories: ProductCategory[] = [
     title: 'Преобразователи частоты',
     description:
       'Конверторы и преобразователи СВЧ-сигналов диапазонов C, X, Ku для спутниковых систем связи и телекоммуникационного оборудования',
-    image: 'bpr0816-5765mp-prim-scaled.jpg',
+    image: 'bpr0917-1314g-scaled.jpg',
     productSlugs: [
       'konvertor-bpr0917-1314og',
       'konvertor-bpr0915-7884',
