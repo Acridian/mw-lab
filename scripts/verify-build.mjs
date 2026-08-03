@@ -11,11 +11,11 @@ const publicationRedirects = JSON.parse(
 );
 
 const categoryRoutes = [
+  'power-amplifiers',
   'signal-generators',
   'signal-switches',
   'frequency-converters',
   'redundancy-systems',
-  'power-amplifiers',
   'antenna-waveguide-components',
 ];
 
