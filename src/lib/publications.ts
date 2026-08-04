@@ -16,8 +16,8 @@ const publicationRoutes: Record<string, { slug: string }> = {
   'seriynoe-proizvodstvo-rossiyskikh-svch-usiliteley': {
     slug: 'serial-production-of-russian-microwave-amplifiers',
   },
-  'novye-produkty-93': { slug: 'new-products-2026-93' },
-  'novye-produkty-96': { slug: 'new-products-2026-96' },
+  'novye-produkty-95': { slug: 'new-products-2026-95' },
+  'novye-produkty-98': { slug: 'projects-and-solutions-2026' },
   '612-2': { slug: 'satellite-communications-and-broadcasting-2025' },
   'modernizatsiya-psss-drive-away': { slug: 'drive-away-station-modernization-2025' },
   'novye-produkty-2': { slug: 'new-products-2025' },
