@@ -32,6 +32,11 @@ const legacyRouteRedirects = {
 };
 
 const legacyPublicationRedirects = {
+  '/sputnikovaya-svyaz-i-veschanie-2026/': 'https://cs.groteck.ru/SATCOM_2026/index.html',
+  '/seriynoe-proizvodstvo-rossiyskikh-svch-usiliteley/':
+    'https://cs.groteck.ru/SATCOM_2026/55/index.html',
+  '/novye-produkty-93/': 'https://cs.groteck.ru/SATCOM_2026/93/index.html',
+  '/novye-produkty-96/': 'https://cs.groteck.ru/SATCOM_2026/96/index.html',
   '/612-2/': 'https://cs.groteck.ru/SATCOM_2025/index.html',
   '/modernizatsiya-psss-drive-away/': 'https://cs.groteck.ru/SATCOM_2025/68/index.html',
   '/novye-produkty-2/': 'https://cs.groteck.ru/SATCOM_2025/104/index.html',
@@ -119,8 +124,8 @@ for (const [source, target] of Object.entries({ ...legacyRouteRedirects, ...lega
 }
 
 const publicationsHtml = await readFile(path.join(root, 'dist/publications/index.html'), 'utf8');
-if ((publicationsHtml.match(/class="publication-media"/g) ?? []).length !== 10) {
-  throw new Error('Expected ten uniform publication preview frames');
+if ((publicationsHtml.match(/class="publication-media"/g) ?? []).length !== 14) {
+  throw new Error('Expected fourteen uniform publication preview frames');
 }
 for (const slug of Object.keys(publicationRedirects)) {
   if (!publicationsHtml.includes(`href="/publications/${slug}/"`)) {
