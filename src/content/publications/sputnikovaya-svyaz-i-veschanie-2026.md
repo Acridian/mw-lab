@@ -4,4 +4,5 @@ date: 2026-08-04
 categories:
   - 'publications'
 coverImage: 'satcom-2026-cover.jpg'
+coverOverlay: 'Спутниковая связь и вещание · 2026'
 ---
