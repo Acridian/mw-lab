@@ -33,8 +33,7 @@ const legacyRouteRedirects = {
 
 const legacyPublicationRedirects = {
   '/sputnikovaya-svyaz-i-veschanie-2026/': 'https://cs.groteck.ru/SATCOM_2026/index.html',
-  '/seriynoe-proizvodstvo-rossiyskikh-svch-usiliteley/':
-    'https://cs.groteck.ru/SATCOM_2026/57/index.html',
+  '/seriynoe-proizvodstvo-rossiyskikh-svch-usiliteley/': 'https://cs.groteck.ru/SATCOM_2026/57/index.html',
   '/novye-produkty-95/': 'https://cs.groteck.ru/SATCOM_2026/95/index.html',
   '/novye-produkty-98/': 'https://cs.groteck.ru/SATCOM_2026/98/index.html',
   '/612-2/': 'https://cs.groteck.ru/SATCOM_2025/index.html',
