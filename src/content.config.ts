@@ -19,6 +19,7 @@ const publications = defineCollection({
     date: z.coerce.date(),
     categories: z.array(z.string()).optional(),
     coverImage: z.string(),
+    coverOverlay: z.string().optional(),
   }),
 });
 
