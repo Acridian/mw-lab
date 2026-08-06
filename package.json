@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && prettier --check . && astro build",
     "preview": "astro preview",
     "check": "astro check && prettier --check .",
     "verify": "npm run build && node scripts/verify-build.mjs",
